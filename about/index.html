@@ -1,0 +1,595 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Андрей Спирин — предприниматель с 45-летним опытом в строительстве. В 60+ освоил ИИ и внедрил нейросотрудников в бизнес СК СВАРОГ. Теперь помогает другим предпринимателям автоматизировать продажи и заявки." />
+  <title>Обо мне — Андрей Спирин, архитектор нейросотрудников | aispirin.ru</title>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Андрей Спирин — архитектор нейросотрудников" />
+  <meta property="og:description" content="45 лет в строительстве. В 60+ освоил ИИ и внедрил нейросотрудников в собственный бизнес. Экономия 150–300 тыс. ₽ за 2 месяца." />
+  <meta property="og:type" content="profile" />
+  <meta property="og:url" content="https://aispirin.ru/about/" />
+  <meta property="og:image" content="https://aispirin.ru/assets/andrey-spirin.jpg" />
+  <meta property="og:locale" content="ru_RU" />
+
+  <!-- Schema.org: Person -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Андрей Спирин",
+    "jobTitle": "Архитектор нейросотрудников",
+    "url": "https://aispirin.ru",
+    "image": "https://aispirin.ru/assets/andrey-spirin.jpg",
+    "description": "Предприниматель с 45-летним опытом в строительстве. В 60+ освоил искусственный интеллект и внедрил ИИ-сотрудников в собственный бизнес СК СВАРОГ. Результат — экономия 150–300 тыс. ₽ за 2 месяца без найма новых сотрудников. Теперь помогает предпринимателям делать то же самое.",
+    "telephone": "+79091575832",
+    "sameAs": [
+      "https://t.me/ASpirin_Ai",
+      "https://tenchat.ru/5235996"
+    ],
+    "knowsAbout": [
+      "Нейросотрудники для бизнеса",
+      "ИИ-агенты",
+      "Автоматизация бизнес-процессов",
+      "Telegram-боты",
+      "Claude AI",
+      "n8n автоматизация",
+      "Управление строительными проектами"
+    ],
+    "alumniOf": {
+      "@type": "Organization",
+      "name": "СК СВАРОГ",
+      "url": "https://сварог.москва"
+    }
+  }
+  </script>
+
+  <!-- Schema.org: WebPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "Об Андрее Спирине — архитекторе нейросотрудников",
+    "url": "https://aispirin.ru/about/",
+    "description": "Биография и кейсы Андрея Спирина: 45 лет в строительстве, внедрение ИИ-сотрудников в СК СВАРОГ, экономия 150–300 тыс. ₽ за 2 месяца.",
+    "mainEntity": {
+      "@type": "Person",
+      "name": "Андрей Спирин"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Главная", "item": "https://aispirin.ru/"},
+        {"@type": "ListItem", "position": 2, "name": "Обо мне", "item": "https://aispirin.ru/about/"}
+      ]
+    }
+  }
+  </script>
+
+  <style>
+    :root {
+      --paper:     #F5E6D0;
+      --paper-d:   #ecd9bd;
+      --orange:    #E8762B;
+      --ink:       #1E1E1E;
+      --ink-2:     #2d2d2d;
+      --ink-light: #5a5a5a;
+      --white:     #FFFFFF;
+      --border:    rgba(30,30,30,0.13);
+    }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', -apple-system, sans-serif; background: var(--paper); color: var(--ink); line-height: 1.65; }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    .wrap { max-width: 1040px; margin: 0 auto; padding: 0 24px; }
+
+    /* ─── NAV (как на остальных страницах сайта) ─── */
+    .nav { position: sticky; top: 0; z-index: 200; background: var(--ink); border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .nav-inner { max-width: 1040px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; height: 56px; gap: 0; }
+    .nav-logo { font-family: 'Oswald', sans-serif; font-size: 15px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--white); margin-right: 8px; padding-right: 20px; border-right: 1px solid rgba(255,255,255,0.1); white-space: nowrap; flex-shrink: 0; text-decoration: none; }
+    .nav-logo span { color: var(--orange); }
+    .nav-links { display: flex; align-items: center; gap: 0; overflow-x: auto; scrollbar-width: none; flex: 1; }
+    .nav-links::-webkit-scrollbar { display: none; }
+    .nav-links a { font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 500; color: rgba(255,255,255,0.55); padding: 0 14px; height: 56px; display: flex; align-items: center; white-space: nowrap; transition: color 0.2s; border-bottom: 2px solid transparent; text-decoration: none; }
+    .nav-links a:hover { color: var(--white); }
+    .nav-cta { margin-left: auto; flex-shrink: 0; background: var(--orange); color: var(--white) !important; font-family: 'Oswald', sans-serif !important; font-size: 13px !important; font-weight: 600 !important; text-transform: uppercase; letter-spacing: 0.06em; padding: 8px 18px !important; height: auto !important; border-radius: 6px; transition: opacity 0.2s !important; border-bottom: none !important; text-decoration: none; }
+    .nav-cta:hover { opacity: 0.85 !important; color: var(--white) !important; }
+    .nav-burger { display: none; flex-direction: column; justify-content: center; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; margin-left: 12px; }
+    .nav-burger span { display: block; width: 22px; height: 2px; background: rgba(255,255,255,0.8); border-radius: 2px; transition: all 0.25s; }
+    .nav-burger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-burger.open span:nth-child(2) { opacity: 0; }
+    .nav-burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    .nav-mobile { display: none; flex-direction: column; background: #1E1E1E; border-top: 1px solid rgba(255,255,255,0.06); max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+    .nav-mobile.open { max-height: 300px; }
+    .nav-mobile a { padding: 13px 24px; color: rgba(255,255,255,0.7); font-size: 14px; border-bottom: 1px solid rgba(255,255,255,0.04); text-decoration: none; display: block; }
+    .nav-mobile a:hover { color: #fff; }
+    .nav-mobile a.active { color: #E8762B; }
+    @media (max-width: 600px) {
+      .nav-links { display: none !important; }
+      .nav-cta { display: none !important; }
+      .nav-burger { display: flex !important; }
+      .nav-mobile { display: flex !important; }
+    }
+
+    /* ─── BTN ─── */
+    .btn-primary { display: inline-flex; align-items: center; gap: 8px; background: var(--orange); color: var(--white); font-family: 'Oswald', sans-serif; font-size: 15px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; padding: 14px 28px; border-radius: 8px; transition: opacity 0.2s, transform 0.2s; white-space: nowrap; text-decoration: none; }
+    .btn-primary:hover { opacity: 0.88; transform: translateY(-1px); }
+
+    /* ─── FOOTER (как на остальных страницах сайта) ─── */
+    .footer { background: var(--ink-2); color: var(--white); padding: 48px 0 32px; }
+    .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; padding-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,0.08); margin-bottom: 28px; }
+    .footer-brand { font-family: 'Oswald', sans-serif; font-size: 18px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 10px; color: var(--white); text-decoration: none; display: inline-block; }
+    .footer-brand span { color: var(--orange); }
+    .footer-desc { font-size: 13px; color: rgba(255,255,255,0.4); line-height: 1.6; max-width: 280px; }
+    .footer-col-title { font-family: 'JetBrains Mono', monospace; font-size: 10px; text-transform: uppercase; letter-spacing: 0.12em; color: rgba(255,255,255,0.35); margin-bottom: 14px; }
+    .footer-links { display: flex; flex-direction: column; gap: 10px; }
+    .footer-links a { font-size: 13px; color: rgba(255,255,255,0.55); transition: color 0.2s; text-decoration: none; }
+    .footer-links a:hover { color: var(--orange); }
+    .footer-bottom { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+    .footer-copy { font-size: 12px; color: rgba(255,255,255,0.25); }
+    @media (max-width: 768px) {
+      .footer-top { grid-template-columns: 1fr 1fr; }
+      .footer-top > :first-child { grid-column: 1 / -1; }
+    }
+
+    .about-page-hero {
+      padding: 80px 0 64px;
+      background: var(--ink);
+      color: var(--white);
+    }
+    .about-page-hero .wrap {
+      display: grid;
+      grid-template-columns: 340px 1fr;
+      gap: 56px;
+      align-items: start;
+    }
+    .about-photo {
+      border-radius: 12px;
+      overflow: hidden;
+      aspect-ratio: 3/4;
+      max-width: 340px;
+    }
+    .about-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+    }
+    .about-hero-content { padding-top: 8px; }
+    .about-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13px;
+      color: var(--orange);
+      letter-spacing: 0.08em;
+      margin-bottom: 16px;
+    }
+    .about-hero-title {
+      font-family: 'Oswald', sans-serif;
+      font-size: clamp(32px, 4vw, 52px);
+      font-weight: 600;
+      line-height: 1.1;
+      margin: 0 0 8px;
+      color: var(--white);
+    }
+    .about-hero-subtitle {
+      font-size: 18px;
+      color: var(--orange);
+      margin: 0 0 28px;
+      font-weight: 500;
+    }
+    .about-hero-text {
+      font-size: 16px;
+      line-height: 1.75;
+      color: rgba(255,255,255,0.78);
+      margin: 0 0 16px;
+    }
+    .about-hero-text strong { color: var(--white); }
+    .about-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin: 36px 0 40px;
+      padding: 24px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 10px;
+    }
+    .about-stat-val {
+      font-family: 'Oswald', sans-serif;
+      font-size: 28px;
+      font-weight: 600;
+      color: var(--orange);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .about-stat-lbl {
+      font-size: 13px;
+      color: rgba(255,255,255,0.55);
+      line-height: 1.4;
+    }
+
+    /* Кейс */
+    .case-section {
+      padding: 72px 0;
+      background: var(--paper);
+    }
+    .section-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13px;
+      color: var(--orange);
+      letter-spacing: 0.08em;
+      margin-bottom: 12px;
+    }
+    .section-title {
+      font-family: 'Oswald', sans-serif;
+      font-size: clamp(26px, 3vw, 40px);
+      font-weight: 600;
+      color: var(--ink);
+      margin: 0 0 40px;
+      line-height: 1.2;
+    }
+    .case-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 40px;
+      margin-bottom: 24px;
+    }
+    .case-card-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+    .case-badge {
+      background: var(--orange);
+      color: var(--white);
+      font-family: 'Oswald', sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      padding: 4px 12px;
+      border-radius: 4px;
+      letter-spacing: 0.05em;
+    }
+    .case-company {
+      font-family: 'Oswald', sans-serif;
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--ink);
+    }
+    .case-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 24px;
+      margin: 28px 0;
+    }
+    .case-col-title {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      color: var(--ink-light);
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    .case-col-text {
+      font-size: 15px;
+      color: var(--ink);
+      line-height: 1.65;
+    }
+    .case-result-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      padding: 24px;
+      background: #f7f0e6;
+      border-radius: 8px;
+      margin-top: 24px;
+    }
+    .case-result-num {
+      font-family: 'Oswald', sans-serif;
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--orange);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .case-result-lbl {
+      font-size: 13px;
+      color: var(--ink-light);
+      line-height: 1.4;
+    }
+    .case-quote {
+      margin: 28px 0 0;
+      padding: 20px 24px;
+      border-left: 3px solid var(--orange);
+      background: #fff8f2;
+      border-radius: 0 8px 8px 0;
+    }
+    .case-quote p {
+      font-size: 15px;
+      line-height: 1.7;
+      color: var(--ink);
+      margin: 0 0 10px;
+      font-style: italic;
+    }
+    .case-quote-author {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--ink-light);
+    }
+
+    /* История */
+    .story-section {
+      padding: 72px 0;
+      background: var(--white);
+    }
+    .story-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+    .story-item {
+      padding: 28px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background: var(--paper);
+    }
+    .story-year {
+      font-family: 'Oswald', sans-serif;
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--orange);
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+    .story-text {
+      font-size: 15px;
+      color: var(--ink);
+      line-height: 1.65;
+    }
+
+    /* CTA */
+    .about-cta {
+      padding: 64px 0;
+      background: var(--ink);
+      text-align: center;
+    }
+    .about-cta h2 {
+      font-family: 'Oswald', sans-serif;
+      font-size: clamp(24px, 3vw, 38px);
+      color: var(--white);
+      margin: 0 0 12px;
+    }
+    .about-cta p {
+      color: rgba(255,255,255,0.6);
+      font-size: 16px;
+      margin: 0 0 32px;
+    }
+
+    @media (max-width: 768px) {
+      .about-page-hero .wrap { grid-template-columns: 1fr; gap: 32px; }
+      .about-photo { max-width: 240px; aspect-ratio: 1/1; }
+      .about-stats { grid-template-columns: 1fr 1fr; }
+      .case-grid { grid-template-columns: 1fr; }
+      .case-result-row { grid-template-columns: 1fr 1fr; }
+      .story-list { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo"><span>Андрей</span> Спирин</a>
+    <div class="nav-links">
+      <a href="/#services">Возможности</a>
+      <a href="/#pricing">Тарифы</a>
+      <a href="/#faq">FAQ</a>
+      <a href="/about/" style="color:var(--orange)" class="active">Обо мне</a>
+      <a href="/stati/">Статьи</a>
+    </div>
+    <a href="tg://resolve?domain=spirin_diagnost_bot" class="nav-cta" target="_blank" rel="noopener">Получить разбор</a>
+    <button class="nav-burger" id="navBurger" aria-label="Меню"><span></span><span></span><span></span></button>
+  </div>
+  <div class="nav-mobile" id="navMobile">
+    <a href="/#services">Возможности</a>
+    <a href="/#pricing">Тарифы</a>
+    <a href="/#faq">FAQ</a>
+    <a href="/about/" class="active">Обо мне</a>
+    <a href="/stati/">Статьи</a>
+    <a href="tg://resolve?domain=spirin_diagnost_bot" style="color:#E8762B; font-weight:600;">Получить разбор</a>
+  </div>
+</nav>
+<script>
+(function(){
+  var b=document.getElementById('navBurger'),m=document.getElementById('navMobile');
+  if(!b||!m) return;
+  b.addEventListener('click',function(){b.classList.toggle('open');m.classList.toggle('open');});
+  m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){b.classList.remove('open');m.classList.remove('open');});});
+})();
+</script>
+
+<!-- HERO -->
+<section class="about-page-hero">
+  <div class="wrap">
+    <div class="about-photo">
+      <img src="/assets/andrey-spirin.jpg" alt="Андрей Спирин — архитектор нейросотрудников" width="340" height="453" loading="eager" />
+    </div>
+    <div class="about-hero-content">
+      <div class="about-label">// Обо мне</div>
+      <h1 class="about-hero-title">Андрей Спирин</h1>
+      <p class="about-hero-subtitle">Архитектор нейросотрудников · Предприниматель · 63 года</p>
+
+      <p class="about-hero-text">
+        <strong>45 лет в строительстве.</strong> Прошёл путь от рабочего до собственника строительной компании. Более 200 завершённых объектов в Москве и Московской области.
+      </p>
+      <p class="about-hero-text">
+        В 60+ начал изучать искусственный интеллект — не ради интереса, а чтобы бизнес работал эффективнее. Внедрил ИИ-сотрудников в собственную компанию <strong>СК СВАРОГ</strong> и за 2 месяца сэкономил от 150 до 300 тысяч рублей на операционных расходах.
+      </p>
+      <p class="about-hero-text">
+        Теперь помогаю другим предпринимателям делать то же самое. Без лишней теории — только то, что реально работает.
+      </p>
+
+      <div class="about-stats">
+        <div>
+          <div class="about-stat-val">45+</div>
+          <div class="about-stat-lbl">лет в бизнесе и управлении</div>
+        </div>
+        <div>
+          <div class="about-stat-val">200+</div>
+          <div class="about-stat-lbl">строительных объектов под ключ</div>
+        </div>
+        <div>
+          <div class="about-stat-val">150–300к</div>
+          <div class="about-stat-lbl">₽ экономии за 2 месяца с ИИ</div>
+        </div>
+      </div>
+
+      <a href="tg://resolve?domain=spirin_diagnost_bot" class="btn-primary" target="_blank" rel="noopener">Написать в Telegram →</a>
+    </div>
+  </div>
+</section>
+
+<!-- КЕЙС -->
+<section class="case-section">
+  <div class="wrap">
+    <div class="section-label">// Кейс</div>
+    <h2 class="section-title">Как ИИ-агент сэкономил<br>СК СВАРОГ 150–300 тыс. ₽ за 2 месяца</h2>
+
+    <div class="case-card">
+      <div class="case-card-header">
+        <div class="case-badge">КЕЙС</div>
+        <div class="case-company">ООО «СК СВАРОГ» — ремонт квартир под ключ, Москва</div>
+      </div>
+
+      <div class="case-grid">
+        <div>
+          <div class="case-col-title">Проблема</div>
+          <div class="case-col-text">
+            Сайт обновлялся вручную. Реклама в Яндекс.Директ настраивалась наугад.
+            Заявки обрабатывались медленно. На всё это уходило время и деньги —
+            либо своё, либо подрядчиков.
+          </div>
+        </div>
+        <div>
+          <div class="case-col-title">Решение</div>
+          <div class="case-col-text">
+            Настроил ИИ-агента, который: оптимизировал и поддерживает два сайта компании,
+            анализирует рекламные кампании и готовит отчёты, автоматизирует
+            обработку входящих заявок и коммуникации с клиентами.
+          </div>
+        </div>
+        <div>
+          <div class="case-col-title">Стек</div>
+          <div class="case-col-text">
+            Claude Code · Telegram-боты · Vercel · Яндекс.Директ API ·
+            n8n · Python · Node.js
+          </div>
+        </div>
+      </div>
+
+      <div class="case-result-row">
+        <div>
+          <div class="case-result-num">150–300к</div>
+          <div class="case-result-lbl">₽ экономия за 2 месяца</div>
+        </div>
+        <div>
+          <div class="case-result-num">2 сайта</div>
+          <div class="case-result-lbl">оптимизированы и поддерживаются ИИ</div>
+        </div>
+        <div>
+          <div class="case-result-num">24/7</div>
+          <div class="case-result-lbl">обработка входящих заявок</div>
+        </div>
+      </div>
+
+      <div class="case-quote">
+        <p>«Честно — был скептиком. В 63 года начинать разбираться в искусственном интеллекте казалось странным. Но когда увидел, что ИИ-агент за два месяца сделал то, на что раньше уходили сотни тысяч рублей и месяцы работы — был в приятном удивлении. Сайты работают, реклама анализируется, заявки обрабатываются. И всё это без найма новых людей.»</p>
+        <div class="case-quote-author">— Андрей Спирин, директор ООО «СК СВАРОГ»</div>
+      </div>
+    </div>
+
+    <p style="font-size:15px; color:var(--ink-light); margin-top:16px;">
+      В разработке: виртуальное ПТО СК СВАРОГ — ИИ-сметчик, ИИ-прораб, ИИ-диспетчер. Не просто боты — полноценные сотрудники, которые делают реальную работу.
+    </p>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="about-cta">
+  <div class="wrap">
+    <h2>Хотите так же для своего бизнеса?</h2>
+    <p>Разберём вашу задачу и покажем, что можно автоматизировать — бесплатно</p>
+    <a href="tg://resolve?domain=spirin_diagnost_bot" class="btn-primary" target="_blank" rel="noopener">Получить бесплатный разбор →</a>
+  </div>
+</section>
+
+<!-- ИСТОРИЯ -->
+<section class="story-section">
+  <div class="wrap">
+    <div class="section-label">// Путь</div>
+    <h2 class="section-title">От стройки к искусственному интеллекту</h2>
+
+    <div class="story-list">
+      <div class="story-item">
+        <div class="story-year">1980–е</div>
+        <div class="story-text">Начало пути в строительстве. Прошёл все ступени: от рабочего до руководителя. Освоил управление объектами, командами, сроками и бюджетами.</div>
+      </div>
+      <div class="story-item">
+        <div class="story-year">1995</div>
+        <div class="story-text">С партнёром открыл свою первую строительную компанию в Саратове. Работала в Саратове и Саратовской области, с Ростелекомом и другими крупными подрядчиками.</div>
+      </div>
+      <div class="story-item">
+        <div class="story-year">2014</div>
+        <div class="story-text">Переехал в Москву. Организовал строительную компанию, которая работает в Москве и Московской области.</div>
+      </div>
+      <div class="story-item">
+        <div class="story-year">2021</div>
+        <div class="story-text">Образовалась группа компаний СВАРОГ. Полный комплекс услуг: ремонт квартир, офисов, коммерческой и жилой недвижимости под ключ, благоустройство территории, инженерные работы.</div>
+      </div>
+      <div class="story-item">
+        <div class="story-year">2025–2026</div>
+        <div class="story-text">Начал изучать AI-инструменты и внедрил ИИ-агента в СК СВАРОГ. Результат — экономия 150–300 тыс. ₽ за первые 2 месяца. В 2026-м параллельно запустил направление «Архитектор нейросотрудников».</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div>
+        <a href="/" class="footer-brand"><span>Андрей</span> Спирин</a>
+        <p class="footer-desc">Архитектор нейросотрудников. Создаю ИИ-сотрудников для малого и среднего бизнеса под ключ.</p>
+      </div>
+      <div>
+        <div class="footer-col-title">Навигация</div>
+        <div class="footer-links">
+          <a href="/#services">Возможности</a>
+          <a href="/#pricing">Тарифы</a>
+          <a href="/#faq">FAQ</a>
+          <a href="/about/">Обо мне</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Контакты</div>
+        <div class="footer-links">
+          <a href="tg://resolve?domain=spirin_diagnost_bot" target="_blank" rel="noopener">Telegram-бот</a>
+          <a href="tel:+79091575832">+7 909 157-58-32</a>
+          <a href="/legal/">Политика конфиденциальности</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2024–2026 Андрей Спирин · aispirin.ru</div>
+      <div class="footer-copy">ИИ-сотрудники для бизнеса под ключ</div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+User-agent: *
+Allow: /
+Sitemap: https://aispirin.ru/sitemap.xml
+
+# AI search engines
+User-agent: GPTBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+# llms.txt — for AI assistants
+# https://aispirin.ru/llms.txt

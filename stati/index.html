@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Статьи — Андрей Спирин</title>
+  <meta name="description" content="Статьи об ИИ-сотрудниках, автоматизации бизнеса, GEO-оптимизации и обучении Claude Code — Андрей Спирин, архитектор нейросотрудников." />
+  <link rel="canonical" href="https://aispirin.ru/stati/" />
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript">
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+    m[i].l=1*new Date();
+    for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}
+    k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");
+    ym(109620461,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:false});
+  </script>
+  <noscript><div><img src="https://mc.yandex.ru/watch/109620461" style="position:absolute;left:-9999px;" alt="" /></div></noscript>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #F5E6D0; --bg-card: #ffffff;
+      --border: rgba(30,30,30,0.13); --text: #1E1E1E;
+      --text-muted: #5a5a5a; --accent: #E8762B;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; font-size: 16px; -webkit-font-smoothing: antialiased; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    nav { position: sticky; top: 0; z-index: 100; background: #1E1E1E; border-bottom: 1px solid rgba(255,255,255,0.06); padding: 0 24px; }
+    .nav-inner { max-width: 800px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 56px; }
+    .nav-logo { font-family: 'Oswald', sans-serif; font-weight: 700; font-size: 15px; color: #fff; text-transform: uppercase; letter-spacing: 0.06em; }
+    .nav-logo span { color: #E8762B; }
+    .nav-links { display: flex; align-items: center; gap: 0; margin-right: auto; margin-left: 24px; }
+    .nav-links a { font-size: 13px; color: rgba(255,255,255,0.65); margin-left: 20px; }
+    .nav-links a:hover { color: #fff; text-decoration: none; }
+    .nav-links a.active { color: #E8762B; }
+    .nav-cta { background: #E8762B; color: #fff; padding: 7px 16px; border-radius: 8px; font-family: 'Oswald', sans-serif; font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; white-space: nowrap; transition: opacity 0.2s; }
+    .nav-cta:hover { opacity: 0.85; text-decoration: none; color: #fff; }
+    .nav-links { display: flex; align-items: center; margin-left: 24px; margin-right: auto; }
+    .nav-links a { font-size: 13px; color: rgba(255,255,255,0.65); margin-left: 16px; text-decoration: none; white-space: nowrap; }
+    .nav-links a:hover { color: #fff; }
+    .nav-links a.active { color: #E8762B; }
+    .nav-burger { display: none; flex-direction: column; justify-content: center; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; margin-left: 12px; }
+    .nav-burger span { display: block; width: 22px; height: 2px; background: rgba(255,255,255,0.8); border-radius: 2px; transition: all 0.25s; }
+    .nav-burger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-burger.open span:nth-child(2) { opacity: 0; }
+    .nav-burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    .nav-mobile { display: none; flex-direction: column; background: #1E1E1E; border-top: 1px solid rgba(255,255,255,0.06); max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+    .nav-mobile.open { max-height: 300px; }
+    .nav-mobile a { padding: 13px 24px; color: rgba(255,255,255,0.7); font-size: 14px; border-bottom: 1px solid rgba(255,255,255,0.04); text-decoration: none; display: block; }
+    .nav-mobile a:hover { color: #fff; }
+    .nav-mobile a.active { color: #E8762B; }
+    @media (max-width: 600px) {
+      .nav-links { display: none !important; }
+      .nav-cta { display: none !important; }
+      .nav-burger { display: flex !important; }
+      .nav-mobile { display: flex !important; }
+    }
+
+    .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+    .hero { padding: 64px 0 48px; border-bottom: 1px solid var(--border); }
+    .hero-breadcrumb { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--text-muted); margin-bottom: 20px; letter-spacing: 0.05em; }
+    .hero-breadcrumb a { color: var(--text-muted); }
+    h1 { font-family: 'Oswald', sans-serif; font-size: clamp(26px, 5vw, 42px); font-weight: 700; text-transform: uppercase; line-height: 1.15; margin-bottom: 16px; }
+    .hero-intro { font-size: 17px; color: var(--text-muted); }
+
+    .articles { padding: 48px 0 80px; display: flex; flex-direction: column; gap: 0; }
+
+    .article-card {
+      display: flex; gap: 24px; align-items: flex-start;
+      padding: 28px 0; border-bottom: 1px solid var(--border);
+      text-decoration: none; transition: none;
+      cursor: pointer; touch-action: manipulation; -webkit-tap-highlight-color: transparent;
+    }
+    .article-card:first-child { padding-top: 0; }
+    .article-card:last-child { border-bottom: none; }
+    .article-num {
+      flex-shrink: 0; width: 36px; height: 36px;
+      background: #E8762B; color: #fff; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Oswald', sans-serif; font-weight: 700; font-size: 15px;
+      margin-top: 4px;
+    }
+    .article-body { flex: 1; }
+    .article-tag { font-family: 'JetBrains Mono', monospace; font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); margin-bottom: 8px; }
+    .article-title { font-family: 'Oswald', sans-serif; font-weight: 700; font-size: clamp(17px, 3vw, 22px); text-transform: uppercase; color: var(--text); line-height: 1.2; margin-bottom: 10px; transition: color 0.2s; }
+    .article-card:hover .article-title { color: #E8762B; }
+    .article-desc { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
+    .article-arrow { flex-shrink: 0; font-size: 20px; color: rgba(30,30,30,0.2); margin-top: 6px; transition: color 0.2s; }
+    .article-card:hover .article-arrow { color: #E8762B; }
+
+    footer { background: #1E1E1E; text-align: center; padding: 24px; font-size: 13px; margin-top: 0; }
+    footer a { color: rgba(255,255,255,0.4); }
+    footer a:hover { color: #E8762B; text-decoration: none; }
+    footer span, footer { color: rgba(255,255,255,0.35); }
+
+    @media (max-width: 600px) {
+      .hero { padding: 40px 0 32px; }
+      .article-card { gap: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">Андрей&nbsp;<span>Спирин</span></a>
+    <div class="nav-links">
+      <a href="/about/">Обо мне</a>
+      <a href="/stati/" class="active">Статьи</a>
+    </div>
+    <a href="tg://resolve?domain=spirin_diagnost_bot" class="nav-cta">Бесплатная диагностика</a>
+    <button class="nav-burger" id="navBurger" aria-label="Меню"><span></span><span></span><span></span></button>
+  </div>
+  <div class="nav-mobile" id="navMobile">
+    <a href="/about/">Обо мне</a>
+    <a href="/stati/" class="active">Статьи</a>
+    <a href="tg://resolve?domain=spirin_diagnost_bot" style="color:#E8762B; font-weight:600;">Бесплатная диагностика</a>
+  </div>
+</nav>
+<script>
+(function(){
+  var b=document.getElementById('navBurger'),m=document.getElementById('navMobile');
+  if(!b||!m) return;
+  b.addEventListener('click',function(){b.classList.toggle('open');m.classList.toggle('open');});
+  m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){b.classList.remove('open');m.classList.remove('open');});});
+})();
+</script>
+
+<div class="container">
+  <div class="hero">
+    <div class="hero-breadcrumb"><a href="/">Главная</a> &nbsp;/&nbsp; Статьи</div>
+    <h1>Статьи</h1>
+    <p class="hero-intro">Про ИИ-сотрудников, автоматизацию бизнеса, GEO-оптимизацию и Claude Code — из личного опыта, без воды.</p>
+  </div>
+
+  <div class="articles">
+
+    <a href="/claude-code-obuchenie/" class="article-card">
+      <div class="article-num">1</div>
+      <div class="article-body">
+        <div class="article-tag">Обучение · Claude Code</div>
+        <div class="article-title">Обучение Claude Code: создай сайт и AI-помощника с нуля</div>
+        <div class="article-desc">Наставничество для тех, кто хочет разобраться сам. Как установить Claude Code, создать первый сайт и настроить персонального AI-помощника — без технического образования.</div>
+      </div>
+      <div class="article-arrow">→</div>
+    </a>
+
+    <a href="/geo-optimizaciya/" class="article-card">
+      <div class="article-num">2</div>
+      <div class="article-body">
+        <div class="article-tag">SEO · GEO-оптимизация</div>
+        <div class="article-title">GEO-оптимизация: как попасть в ответы ChatGPT и Алисы</div>
+        <div class="article-desc">Что такое GEO-оптимизация и чем она отличается от SEO. Чек-лист из 5 шагов — проверь, видят ли нейросети твой сайт при ответах клиентам.</div>
+      </div>
+      <div class="article-arrow">→</div>
+    </a>
+
+    <a href="/ii-sotrudnik-dlya-biznesa/" class="article-card">
+      <div class="article-num">3</div>
+      <div class="article-body">
+        <div class="article-tag">ИИ-автоматизация</div>
+        <div class="article-title">ИИ-сотрудник для бизнеса: автоматизация заявок, продаж и рутины</div>
+        <div class="article-desc">Кому нужен ИИ-сотрудник, что он умеет и как внедрить его без разработчика и без технического образования.</div>
+      </div>
+      <div class="article-arrow">→</div>
+    </a>
+
+    <a href="/ii-agenty-dlya-biznesa/" class="article-card">
+      <div class="article-num">4</div>
+      <div class="article-body">
+        <div class="article-tag">ИИ-агенты</div>
+        <div class="article-title">ИИ-агенты для малого бизнеса: кому нужны и что дают</div>
+        <div class="article-desc">Разбор 2026: что такое ИИ-агенты, чем они отличаются от обычных чат-ботов и в каких задачах реально окупаются.</div>
+      </div>
+      <div class="article-arrow">→</div>
+    </a>
+
+    <a href="/ii-dlya-prodazh/" class="article-card">
+      <div class="article-num">5</div>
+      <div class="article-body">
+        <div class="article-tag">Продажи</div>
+        <div class="article-title">ИИ для продаж: автоматизация прогрева и квалификации клиентов</div>
+        <div class="article-desc">Как ИИ-сотрудник закрывает входящие заявки, прогревает лидов и снимает нагрузку с менеджеров — без потери качества.</div>
+      </div>
+      <div class="article-arrow">→</div>
+    </a>
+
+    <a href="/ii-dlya-zayavok/" class="article-card">
+      <div class="article-num">6</div>
+      <div class="article-body">
+        <div class="article-tag">Заявки · Поддержка</div>
+        <div class="article-title">ИИ для обработки заявок: автоматизация входящих обращений</div>
+        <div class="article-desc">Как настроить автоматическую обработку входящих заявок, ответов клиентам и маршрутизацию без найма операторов.</div>
+      </div>
+      <div class="article-arrow">→</div>
+    </a>
+
+  </div>
+</div>
+
+<footer>
+  <a href="/">← На главную</a>
+  &nbsp;&nbsp;·&nbsp;&nbsp;
+  <a href="https://aispirin.ru">aispirin.ru</a>
+  &nbsp;&nbsp;·&nbsp;&nbsp;
+  Андрей Спирин — архитектор нейросотрудников
+  &nbsp;&nbsp;·&nbsp;&nbsp;
+  <a href="/legal/">Юридические документы</a>
+</footer>
+<script>
+document.querySelectorAll('.article-card').forEach(function(a){
+  a.addEventListener('touchstart', function(){}, {passive:true});
+});
+</script>
+
+</body>
+</html>

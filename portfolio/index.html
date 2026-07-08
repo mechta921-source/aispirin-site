@@ -1,0 +1,473 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Портфолио Андрея Спирина — кейсы AI-автоматизации для бизнеса: боты для СК СВАРОГ, AI-оптимизация сайтов, сайт под ключ для ПрофиСтрой, бот-психолог, GPT-маркетолог." />
+  <title>Портфолио — Андрей Спирин, архитектор нейросотрудников | aispirin.ru</title>
+
+  <meta property="og:title" content="Портфолио — Андрей Спирин, архитектор нейросотрудников" />
+  <meta property="og:description" content="Кейсы AI-автоматизации: боты для СК СВАРОГ, AI-оптимизация сайтов, сайт под ключ, бот-психолог, GPT-маркетолог." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://aispirin.ru/portfolio/" />
+  <meta property="og:locale" content="ru_RU" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Портфолио Андрея Спирина",
+    "url": "https://aispirin.ru/portfolio/",
+    "description": "Кейсы AI-автоматизации для бизнеса: боты, сайты, AI-оптимизация.",
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Главная", "item": "https://aispirin.ru/"},
+        {"@type": "ListItem", "position": 2, "name": "Портфолио", "item": "https://aispirin.ru/portfolio/"}
+      ]
+    }
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="/assets/index-CDJJu-Dl.css" />
+  <style>
+    :root {
+      --paper:     #F5E6D0;
+      --paper-d:   #ecd9bd;
+      --orange:    #E8762B;
+      --ink:       #1E1E1E;
+      --ink-2:     #2d2d2d;
+      --ink-light: #5a5a5a;
+      --white:     #FFFFFF;
+      --border:    rgba(30,30,30,0.13);
+    }
+    body { font-family: 'Inter', -apple-system, sans-serif; background: var(--paper); color: var(--ink); margin: 0; }
+    .wrap { max-width: 1040px; margin: 0 auto; padding: 0 24px; }
+
+    /* ─── NAV (как на остальных страницах сайта) ─── */
+    .nav { position: sticky; top: 0; z-index: 200; background: var(--ink); border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .nav-inner { max-width: 1040px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; height: 56px; gap: 0; }
+    .nav-logo { font-family: 'Oswald', sans-serif; font-size: 15px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--white); margin-right: 8px; padding-right: 20px; border-right: 1px solid rgba(255,255,255,0.1); white-space: nowrap; flex-shrink: 0; text-decoration: none; }
+    .nav-logo span { color: var(--orange); }
+    .nav-links { display: flex; align-items: center; gap: 0; overflow-x: auto; scrollbar-width: none; flex: 1; }
+    .nav-links::-webkit-scrollbar { display: none; }
+    .nav-links a { font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 500; color: rgba(255,255,255,0.55); padding: 0 14px; height: 56px; display: flex; align-items: center; white-space: nowrap; transition: color 0.2s; border-bottom: 2px solid transparent; text-decoration: none; }
+    .nav-links a:hover { color: var(--white); }
+    .nav-cta { margin-left: auto; flex-shrink: 0; background: var(--orange); color: var(--white) !important; font-family: 'Oswald', sans-serif !important; font-size: 13px !important; font-weight: 600 !important; text-transform: uppercase; letter-spacing: 0.06em; padding: 8px 18px !important; height: auto !important; border-radius: 6px; transition: opacity 0.2s !important; border-bottom: none !important; text-decoration: none; }
+    .nav-cta:hover { opacity: 0.85 !important; color: var(--white) !important; }
+
+    /* ─── BTN ─── */
+    .btn-primary { display: inline-flex; align-items: center; gap: 8px; background: var(--orange); color: var(--white); font-family: 'Oswald', sans-serif; font-size: 15px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; padding: 14px 28px; border-radius: 8px; transition: opacity 0.2s, transform 0.2s; white-space: nowrap; text-decoration: none; }
+    .btn-primary:hover { opacity: 0.88; transform: translateY(-1px); }
+
+    /* ─── FOOTER (как на остальных страницах сайта) ─── */
+    .footer { background: var(--ink-2); color: var(--white); padding: 48px 0 32px; }
+    .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; padding-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,0.08); margin-bottom: 28px; }
+    .footer-brand { font-family: 'Oswald', sans-serif; font-size: 18px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 10px; color: var(--white); text-decoration: none; display: inline-block; }
+    .footer-brand span { color: var(--orange); }
+    .footer-desc { font-size: 13px; color: rgba(255,255,255,0.4); line-height: 1.6; max-width: 280px; }
+    .footer-col-title { font-family: 'JetBrains Mono', monospace; font-size: 10px; text-transform: uppercase; letter-spacing: 0.12em; color: rgba(255,255,255,0.35); margin-bottom: 14px; }
+    .footer-links { display: flex; flex-direction: column; gap: 10px; }
+    .footer-links a { font-size: 13px; color: rgba(255,255,255,0.55); transition: color 0.2s; text-decoration: none; }
+    .footer-links a:hover { color: var(--orange); }
+    .footer-bottom { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+    .footer-copy { font-size: 12px; color: rgba(255,255,255,0.25); }
+    @media (max-width: 768px) {
+      .footer-top { grid-template-columns: 1fr 1fr; }
+      .footer-top > :first-child { grid-column: 1 / -1; }
+    }
+
+    .pf-hero {
+      padding: 90px 0 56px;
+      background: var(--ink);
+      color: var(--white);
+      text-align: center;
+    }
+    .pf-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13px;
+      color: var(--orange);
+      letter-spacing: 0.08em;
+      margin-bottom: 16px;
+    }
+    .pf-title {
+      font-family: 'Oswald', sans-serif;
+      font-size: clamp(32px, 5vw, 52px);
+      font-weight: 600;
+      margin: 0 0 14px;
+    }
+    .pf-sub {
+      font-size: 17px;
+      color: rgba(255,255,255,0.7);
+      max-width: 620px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    .pf-cases { padding: 64px 0; }
+
+    .case-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 40px;
+      margin-bottom: 28px;
+    }
+    .case-card-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+    .case-badge {
+      background: var(--orange);
+      color: var(--white);
+      font-family: 'Oswald', sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      padding: 4px 12px;
+      border-radius: 4px;
+      letter-spacing: 0.05em;
+    }
+    .case-status {
+      font-size: 12px;
+      font-weight: 600;
+      padding: 3px 12px;
+      border-radius: 20px;
+    }
+    .status-ready { background: #e3f3e3; color: #2e7d32; }
+    .status-progress { background: #fde9d8; color: var(--orange); }
+    .status-personal { background: #f0f0f0; color: var(--ink-light); }
+
+    .case-company {
+      font-family: 'Oswald', sans-serif;
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--ink);
+    }
+    .case-desc {
+      font-size: 15.5px;
+      line-height: 1.7;
+      color: var(--ink);
+      margin-bottom: 22px;
+    }
+    .case-sub {
+      background: var(--paper);
+      border-left: 3px solid var(--orange);
+      border-radius: 0 8px 8px 0;
+      padding: 14px 18px;
+      margin-bottom: 14px;
+    }
+    .case-sub-title {
+      font-weight: 600;
+      font-size: 15px;
+      margin-bottom: 4px;
+    }
+    .case-sub-title .tag {
+      font-size: 11px;
+      font-weight: 700;
+      padding: 2px 9px;
+      border-radius: 20px;
+      margin-left: 8px;
+      vertical-align: middle;
+    }
+    .case-sub-text {
+      font-size: 14.5px;
+      color: var(--ink-light);
+      line-height: 1.55;
+    }
+    .case-shots {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 14px;
+      margin-top: 20px;
+    }
+    .case-shots img {
+      width: 100%;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      display: block;
+    }
+    .case-shots.single { grid-template-columns: 1fr; max-width: 480px; }
+    .case-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    .case-step { display: flex; gap: 12px; align-items: flex-start; font-size: 15px; }
+    .case-step-num {
+      background: var(--orange);
+      color: var(--white);
+      font-weight: 700;
+      font-size: 13px;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .case-link {
+      display: inline-block;
+      margin-top: 6px;
+      color: var(--orange);
+      font-weight: 600;
+      font-size: 14.5px;
+      text-decoration: none;
+      border-bottom: 1px solid var(--orange);
+    }
+    .case-price {
+      display: inline-block;
+      margin-top: 14px;
+      background: var(--paper);
+      border: 1px solid var(--orange);
+      color: var(--ink);
+      font-size: 14px;
+      font-weight: 600;
+      padding: 7px 16px;
+      border-radius: 20px;
+    }
+
+    .pf-cta {
+      padding: 60px 0;
+      background: var(--ink);
+      text-align: center;
+    }
+    .pf-cta h2 {
+      font-family: 'Oswald', sans-serif;
+      font-size: clamp(22px, 3vw, 34px);
+      color: var(--white);
+      margin: 0 0 12px;
+    }
+    .pf-cta p { color: rgba(255,255,255,0.6); font-size: 16px; margin: 0 0 28px; }
+
+    @media (max-width: 640px) {
+      .case-card { padding: 26px; }
+      .case-card-header { gap: 10px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo"><span>Андрей</span> Спирин</a>
+    <div class="nav-links">
+      <a href="/#services">Возможности</a>
+      <a href="/#pricing">Тарифы</a>
+      <a href="/#faq">FAQ</a>
+      <a href="/about/">Обо мне</a>
+      <a href="/portfolio/" style="color:var(--orange)">Портфолио</a>
+    </div>
+    <a href="tg://resolve?domain=spirin_diagnost_bot" class="nav-cta" target="_blank" rel="noopener">Получить разбор</a>
+  </div>
+</nav>
+
+<section class="pf-hero">
+  <div class="wrap">
+    <div class="pf-label">// Портфолио</div>
+    <h1 class="pf-title">Кейсы и проекты</h1>
+    <p class="pf-sub">AI-сотрудники, сайты и автоматизация, которые я создал для своего бизнеса и для клиентов — за время обучения на курсе «Архитектор нейросотрудников».</p>
+  </div>
+</section>
+
+<section class="pf-cases">
+  <div class="wrap">
+
+    <!-- КЕЙС 1 — СК СВАРОГ -->
+    <div class="case-card">
+      <div class="case-card-header">
+        <div class="case-badge">КЕЙС</div>
+        <div class="case-company">СК СВАРОГ — ремонт квартир под ключ</div>
+      </div>
+      <div class="case-desc">Внутренняя автоматизация собственной строительной компании: приём заявок, реклама, сопровождение объектов.</div>
+
+      <div class="case-sub">
+        <div class="case-sub-title">Бот приёма и квалификации заявок <span class="tag status-ready">готово</span></div>
+        <div class="case-sub-text">Принимает входящую заявку, записывает на замер, передаёт менеджеру в Telegram.</div>
+      </div>
+      <div class="case-sub">
+        <div class="case-sub-title">Боты ПТО — Татьяна, Ирина, Ольга, Владимир, Дмитрий <span class="tag status-progress">в процессе</span></div>
+        <div class="case-sub-text">Диспетчер → планировки → сметы → контроль прорабов на объекте. Полная цепочка сопровождения.</div>
+      </div>
+      <div class="case-sub">
+        <div class="case-sub-title">Бот-маркетолог Яндекс Директ <span class="tag status-ready">готово</span></div>
+        <div class="case-sub-text">Объявления с UTM-метками, минус-слова, статистика каждый день, контроль рекламных кампаний.</div>
+      </div>
+      <div class="case-sub">
+        <div class="case-sub-title">Сайт seo.сварог.москва <span class="tag status-ready">готово</span></div>
+        <div class="case-sub-text">Создал сайт с нуля, 9 страниц. SEO-оптимизация и AI-оптимизация (llms.txt, JSON-LD, robots.txt для AI-ботов).</div>
+      </div>
+
+      <div class="case-shots">
+        <img src="/assets/portfolio/svarog-zayavka.jpg" alt="Бот приёма заявок СК СВАРОГ" loading="lazy">
+        <img src="/assets/portfolio/marketolog-direct.jpg" alt="Бот-маркетолог Яндекс Директ" loading="lazy">
+      </div>
+      <a href="https://seo.сварог.москва" target="_blank" rel="noopener" class="case-link">Открыть seo.сварог.москва →</a>
+    </div>
+
+    <!-- КЕЙС 2 — Архитектор нейросотрудников -->
+    <div class="case-card">
+      <div class="case-card-header">
+        <div class="case-badge">КЕЙС</div>
+        <div class="case-company">Направление «Архитектор нейросотрудников»</div>
+      </div>
+      <div class="case-desc">Продвижение собственного направления через AI-инструменты.</div>
+
+      <div class="case-sub">
+        <div class="case-sub-title">Сайт aispirin.ru <span class="tag status-ready">готово</span></div>
+        <div class="case-sub-text">Создал сайт с нуля, 5 тематических SEO-страниц + страница «Обо мне». Плюс AI-оптимизация — llms.txt, robots.txt под AI-ботов, JSON-LD. Люди всё чаще спрашивают не Google, а напрямую ChatGPT и Perplexity — без AI-разметки сайт туда просто не попадёт.</div>
+      </div>
+      <div class="case-sub">
+        <div class="case-sub-title">Бот-аудитор — Авито и Telegram-канал <span class="tag status-ready">готово</span></div>
+        <div class="case-sub-text">Принимает обращения с Авито и из Telegram-канала, проводит первичный аудит бизнеса клиента. По запросу из канала выдаёт лид-магнит — гайд «Как увеличить продажи без найма новых менеджеров», и предлагает бесплатный разбор.</div>
+      </div>
+
+      <div class="case-shots single">
+        <img src="/assets/portfolio/audit-bot.jpg" alt="Бот-аудитор на Авито" loading="lazy">
+      </div>
+      <a href="https://aispirin.ru/" target="_blank" rel="noopener" class="case-link">Открыть aispirin.ru →</a>
+    </div>
+
+    <!-- КЕЙС 3 — ПрофиСтрой -->
+    <div class="case-card">
+      <div class="case-card-header">
+        <div class="case-badge">КЕЙС — ВНЕШНИЙ КЛИЕНТ</div>
+        <div class="case-company">ПрофиСтрой — производство металлоконструкций</div>
+      </div>
+      <div class="case-desc">Сайт под ключ для внешнего клиента — за 5–6 часов через AI, не через студию.<br><br>
+      <strong>Задание от клиента:</strong> сделать сайт по аналогии с сайтами конкурентов — готового описания и текстов не было, всё разрабатывали сами с нуля.</div>
+
+      <div class="case-steps">
+        <div class="case-step"><div class="case-step-num">1</div><div>Логотип — в форматах PNG и SVG</div></div>
+        <div class="case-step"><div class="case-step-num">2</div><div>Зарегистрировали домен</div></div>
+        <div class="case-step"><div class="case-step-num">3</div><div>Залили сайт через Vercel</div></div>
+        <div class="case-step"><div class="case-step-num">4</div><div>Сайт передан клиенту, ждём приёмку</div></div>
+      </div>
+
+      <div class="case-shots">
+        <img src="/assets/portfolio/profistroi.jpg" alt="Сайт ПрофиСтрой" loading="lazy">
+      </div>
+      <a href="https://profistroi77.vercel.app" target="_blank" rel="noopener" class="case-link">Открыть сайт →</a>
+    </div>
+
+    <!-- КЕЙС 4 — Бот-психолог -->
+    <div class="case-card">
+      <div class="case-card-header">
+        <div class="case-badge">БОНУС</div>
+        <div class="case-company">Бот-психолог Лена</div>
+        <div class="case-status status-personal">для личного использования</div>
+      </div>
+      <div class="case-desc">Личный AI-психолог — пользуюсь сам и даю близким, не коммерческий продукт. Понимает и голос, и текст — отвечает в том же формате, в котором написал собеседник. Три режима: мама, папа, ребёнок. Ведёт точный диалог, как настоящий психолог-практик, и при необходимости ищет в интернете для точных рекомендаций.</div>
+
+      <div class="case-shots single">
+        <img src="/assets/portfolio/psy-bot.jpg" alt="Бот-психолог Лена" loading="lazy">
+      </div>
+    </div>
+
+    <!-- КЕЙС 5 — Кастомные GPT -->
+    <div class="case-card">
+      <div class="case-card-header">
+        <div class="case-badge">КЕЙС</div>
+        <div class="case-company">Кастомные GPT для маркетинга</div>
+      </div>
+      <div class="case-desc">Два GPT под разные задачи маркетинга и продвижения.</div>
+
+      <div class="case-sub">
+        <div class="case-sub-title">«Маркетолог»</div>
+        <div class="case-sub-text">Контент-план, помощь с составом и оптимизацией сайта, генерация логотипов (с доработкой через программу).</div>
+      </div>
+      <a href="https://chatgpt.com/g/g-69e07722888c8191b031e0ca7955aeeb-marketolog" target="_blank" rel="noopener" class="case-link">Открыть «Маркетолог» →</a>
+
+      <div class="case-sub" style="margin-top:18px;">
+        <div class="case-sub-title">«Макс» — контент-менеджер и SMM-специалист</div>
+        <div class="case-sub-text">Ведение соцсетей, контент-план, SMM-стратегия.</div>
+      </div>
+      <a href="https://chatgpt.com/g/g-69e0edf0c2388191a00ec0613d8128b8-maks-kontent-menedzher-i-smm-spetsialist" target="_blank" rel="noopener" class="case-link">Открыть «Макс» →</a>
+      <br>
+      <span class="case-price" style="margin-top:14px;">Можно продавать как отдельный продукт · 1 500–2 000 ₽</span>
+    </div>
+
+    <!-- КЕЙС 6 — Строй на века -->
+    <div class="case-card">
+      <div class="case-card-header">
+        <div class="case-badge">NEUROAGENTS.RU</div>
+        <div class="case-company">«Строй на века» — опт стройматериалов</div>
+      </div>
+      <div class="case-desc">Первый бот, ещё до Claude Code — сделан на no-code платформе NeuroAgents.ru.</div>
+      <div class="case-sub">
+        <div class="case-sub-title">Бот приёма заявок <span class="tag status-ready">готово</span></div>
+        <div class="case-sub-text">Принимает входящие заявки клиентов.</div>
+      </div>
+      <div class="case-sub">
+        <div class="case-sub-title">Бот службы поддержки <span class="tag status-ready">готово</span></div>
+        <div class="case-sub-text">Обрабатывает обращения в службу поддержки компании.</div>
+      </div>
+    </div>
+
+    <!-- КЕЙС 7 — ПВХ-конструкции -->
+    <div class="case-card">
+      <div class="case-card-header">
+        <div class="case-badge">NEUROAGENTS.RU</div>
+        <div class="case-company">Производство ПВХ-конструкций</div>
+      </div>
+      <div class="case-desc">Производство и установка ПВХ-окон и конструкций.</div>
+      <div class="case-sub">
+        <div class="case-sub-title">Бот приёма заявок на замер <span class="tag status-ready">готово</span></div>
+        <div class="case-sub-text">Принимает заявку на замер.</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="pf-cta">
+  <div class="wrap">
+    <h2>Хотите так же для своего бизнеса?</h2>
+    <p>Разберём вашу задачу и покажем, что можно автоматизировать — бесплатно</p>
+    <a href="tg://resolve?domain=spirin_diagnost_bot" class="btn-primary" target="_blank" rel="noopener">Получить бесплатный разбор →</a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div>
+        <a href="/" class="footer-brand"><span>Андрей</span> Спирин</a>
+        <p class="footer-desc">Архитектор нейросотрудников. Создаю ИИ-сотрудников для малого и среднего бизнеса под ключ.</p>
+      </div>
+      <div>
+        <div class="footer-col-title">Навигация</div>
+        <div class="footer-links">
+          <a href="/#services">Возможности</a>
+          <a href="/#pricing">Тарифы</a>
+          <a href="/#faq">FAQ</a>
+          <a href="/about/">Обо мне</a>
+          <a href="/portfolio/">Портфолио</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Контакты</div>
+        <div class="footer-links">
+          <a href="tg://resolve?domain=spirin_diagnost_bot" target="_blank" rel="noopener">Telegram-бот</a>
+          <a href="tel:+79091575832">+7 909 157-58-32</a>
+          <a href="/legal/">Политика конфиденциальности</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2024–2026 Андрей Спирин · aispirin.ru</div>
+      <div class="footer-copy">ИИ-сотрудники для бизнеса под ключ</div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

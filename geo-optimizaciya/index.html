@@ -1,0 +1,509 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GEO-оптимизация сайта: как попасть в ответы ChatGPT и Алисы</title>
+  <meta name="description" content="Что такое GEO-оптимизация и чем она отличается от SEO. Чек-лист из 5 шагов для проверки своего сайта — видят ли нейросети ChatGPT, Алиса, Perplexity ваш контент при ответах клиентам." />
+  <meta name="keywords" content="GEO оптимизация, GEO-оптимизация сайта, продвижение в ChatGPT, AI-поиск, продвижение в нейросетях, Яндекс Алиса поиск, GEO vs SEO, генеративный поиск" />
+
+  <meta property="og:title" content="GEO-оптимизация: как попасть в ответы ChatGPT и Алисы — Андрей Спирин" />
+  <meta property="og:description" content="Что такое GEO-оптимизация, чем отличается от SEO и как проверить свой сайт за 5 шагов." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://aispirin.ru/geo-optimizaciya/" />
+  <meta property="og:locale" content="ru_RU" />
+
+  <link rel="canonical" href="https://aispirin.ru/geo-optimizaciya/" />
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "GEO-оптимизация сайта: как попасть в ответы ChatGPT и Алисы",
+    "description": "Что такое GEO-оптимизация, чем она отличается от SEO, и чек-лист из 5 шагов для проверки своего сайта.",
+    "author": {
+      "@type": "Person",
+      "name": "Андрей Спирин",
+      "url": "https://aispirin.ru"
+    },
+    "publisher": {
+      "@type": "Person",
+      "name": "Андрей Спирин",
+      "url": "https://aispirin.ru"
+    },
+    "url": "https://aispirin.ru/geo-optimizaciya/",
+    "mainEntityOfPage": "https://aispirin.ru/geo-optimizaciya/"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Что такое GEO-оптимизация?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "GEO — Generative Engine Optimization — оптимизация сайта под AI-поисковики: ChatGPT, Яндекс Алиса, Perplexity. Цель — чтобы нейросеть цитировала ваш сайт при ответах клиентам, а не просто ранжировала его на странице поиска."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Чем GEO отличается от SEO?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "SEO борется за клик на сайт через поиск. GEO борется за то, чтобы нейросеть включила ваш ответ в свой — без перехода на сайт вообще. Больше половины запросов в Google сегодня заканчиваются без перехода: человек получает ответ от AI и не идёт дальше."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "GEO-оптимизация заменит SEO?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Нет, дополнит. Обычный поиск никуда не исчезает, но рядом появился второй канал — AI-поисковики. Компании, которые видны только в одном из двух, теряют часть потенциальных клиентов."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Нужно ли срочно что-то переделывать на сайте?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Сначала стоит проверить, видят ли нейросети ваш контент вообще. Часто весь текст спрятан в браузерном рендеринге и AI-боты видят пустую страницу — даже если сайт отлично выглядит для людей."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "GEO-оптимизация — это дорого и долго?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Базовая техническая основа делается за дни, не месяцы. Объём зависит от размера сайта: пять страниц или пятьсот — разный объём работы, но не разная сложность."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Это работает только для крупного бизнеса?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Наоборот: у небольшой компании обычно меньше контента, и привести его в порядок быстрее и дешевле, чем у крупного игрока с тысячами страниц."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript">
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+    m[i].l=1*new Date();
+    for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}
+    k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");
+    ym(109620461,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:false});
+  </script>
+  <noscript><div><img src="https://mc.yandex.ru/watch/109620461" style="position:absolute;left:-9999px;" alt="" /></div></noscript>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #F5E6D0;
+      --bg-card: #ffffff;
+      --bg-highlight: #ecd9bd;
+      --border: rgba(30,30,30,0.13);
+      --text: #1E1E1E;
+      --text-muted: #5a5a5a;
+      --accent: #E8762B;
+      --accent-hover: #c9681a;
+      --accent-light: rgba(232,118,43,0.09);
+      --ink: #1E1E1E;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { color: #E8762B; text-decoration: underline; }
+
+    /* NAV */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: #1E1E1E;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      padding: 0 24px;
+    }
+    .nav-inner {
+      max-width: 800px; margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 56px;
+    }
+    .nav-logo {
+      font-family: 'Oswald', sans-serif;
+      font-weight: 700; font-size: 15px; color: #fff;
+      text-transform: uppercase; letter-spacing: 0.06em;
+    }
+    .nav-logo span { color: #E8762B; }
+    .nav-cta {
+      background: #E8762B; color: #fff;
+      padding: 7px 16px; border-radius: 8px;
+      font-family: 'Oswald', sans-serif;
+      font-size: 13px; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.06em;
+      white-space: nowrap; transition: opacity 0.2s;
+    }
+    .nav-cta:hover { opacity: 0.85; text-decoration: none; color: #fff; }
+    .nav-links { display: flex; align-items: center; margin-left: 24px; margin-right: auto; }
+    .nav-links a { font-size: 13px; color: rgba(255,255,255,0.65); margin-left: 16px; text-decoration: none; white-space: nowrap; }
+    .nav-links a:hover { color: #fff; }
+    .nav-links a.active { color: #E8762B; }
+    .nav-burger { display: none; flex-direction: column; justify-content: center; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; margin-left: 12px; }
+    .nav-burger span { display: block; width: 22px; height: 2px; background: rgba(255,255,255,0.8); border-radius: 2px; transition: all 0.25s; }
+    .nav-burger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-burger.open span:nth-child(2) { opacity: 0; }
+    .nav-burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    .nav-mobile { display: none; flex-direction: column; background: #1E1E1E; border-top: 1px solid rgba(255,255,255,0.06); max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+    .nav-mobile.open { max-height: 300px; }
+    .nav-mobile a { padding: 13px 24px; color: rgba(255,255,255,0.7); font-size: 14px; border-bottom: 1px solid rgba(255,255,255,0.04); text-decoration: none; display: block; }
+    .nav-mobile a:hover { color: #fff; }
+    .nav-mobile a.active { color: #E8762B; }
+    @media (max-width: 600px) {
+      .nav-links { display: none !important; }
+      .nav-cta { display: none !important; }
+      .nav-burger { display: flex !important; }
+      .nav-mobile { display: flex !important; }
+    }
+
+    /* LAYOUT */
+    .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+    /* HERO */
+    .hero {
+      padding: 64px 0 48px;
+      border-bottom: 1px solid var(--border);
+    }
+    .hero-breadcrumb {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px; color: var(--text-muted);
+      margin-bottom: 20px; letter-spacing: 0.05em;
+    }
+    .hero-breadcrumb a { color: var(--text-muted); }
+    .hero-breadcrumb a:hover { color: var(--text); text-decoration: none; }
+    h1 {
+      font-family: 'Oswald', sans-serif;
+      font-size: clamp(22px, 4.5vw, 38px);
+      font-weight: 700; text-transform: uppercase;
+      line-height: 1.15; letter-spacing: -0.01em;
+      margin-bottom: 20px; color: var(--text);
+      word-break: break-word;
+    }
+    .hero-intro {
+      font-size: 17px; color: var(--text-muted); line-height: 1.7;
+    }
+
+    /* ARTICLE */
+    article { padding: 48px 0 80px; }
+
+    h2 {
+      font-family: 'Oswald', sans-serif;
+      font-size: clamp(16px, 3vw, 24px);
+      font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.01em;
+      margin: 52px 0 16px; padding-top: 8px;
+      border-top: 2px solid #E8762B;
+      display: inline-block;
+      color: var(--text);
+    }
+    h2:first-child { margin-top: 0; }
+
+    h3 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 16px; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.04em;
+      margin: 32px 0 12px; color: var(--text);
+    }
+
+    p { margin-bottom: 16px; color: #3a3a3a; }
+
+    ul, ol { margin: 0 0 20px 0; padding-left: 0; list-style: none; }
+    ul li, ol li { position: relative; padding: 5px 0 5px 24px; color: #3a3a3a; }
+    ul li::before { content: '\2192'; position: absolute; left: 0; color: #E8762B; font-size: 14px; }
+    ol { counter-reset: item; }
+    ol li { counter-increment: item; }
+    ol li::before { content: counter(item) '.'; position: absolute; left: 0; color: #E8762B; font-weight: 700; font-size: 14px; }
+    strong { color: var(--text); font-weight: 600; }
+
+    /* CARDS */
+    .card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin: 24px 0; }
+    .card-accent { border-left: 3px solid #E8762B; }
+    .card p { margin-bottom: 8px; }
+    .card p:last-child { margin-bottom: 0; }
+
+    /* EXPERT TIP */
+    .expert-tip { background: rgba(232,118,43,0.07); border: 1px solid rgba(232,118,43,0.2); border-radius: 10px; padding: 18px 20px; margin: 24px 0; }
+    .expert-tip-label { font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.1em; color: #E8762B; margin-bottom: 8px; }
+    .expert-tip p { color: #3a3a3a; margin-bottom: 0; font-size: 15px; }
+
+    /* STAT */
+    .stat-block { background: var(--bg-highlight); border: 1px solid var(--border); border-radius: 10px; padding: 18px 20px; margin: 24px 0; font-size: 14px; color: var(--text-muted); font-style: italic; }
+
+    /* CHECKLIST STEPS */
+    .step-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 20px 24px; margin: 16px 0; display: flex; gap: 20px; align-items: flex-start; }
+    .step-num { flex-shrink: 0; width: 38px; height: 38px; background: #E8762B; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Oswald', sans-serif; font-weight: 700; font-size: 17px; }
+    .step-body { font-size: 15px; line-height: 1.6; }
+    .step-body strong { display: block; margin-bottom: 4px; }
+
+    /* FAQ */
+    .faq-item { border-bottom: 1px solid var(--border); padding: 20px 0; }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-q { font-family: 'Oswald', sans-serif; font-size: 16px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; color: var(--text); margin-bottom: 10px; }
+    .faq-a { color: #3a3a3a; font-size: 15px; line-height: 1.65; }
+
+    /* CTA BLOCK */
+    .cta-block { background: #1E1E1E; border-radius: 16px; padding: 40px 32px; margin: 48px 0 0; text-align: center; }
+    .cta-block h2 { color: #fff; border-color: #E8762B; margin-top: 0; }
+    .cta-block p { color: rgba(255,255,255,0.65); margin-bottom: 0; }
+    .btn {
+      display: inline-block; margin-top: 20px;
+      background: #E8762B; color: #fff;
+      padding: 14px 28px; border-radius: 10px;
+      font-family: 'Oswald', sans-serif;
+      font-size: 15px; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.06em;
+      transition: opacity 0.2s; text-decoration: none;
+    }
+    .btn:hover { opacity: 0.85; color: #fff; text-decoration: none; }
+    .btn-secondary {
+      display: inline-block; margin-top: 12px;
+      color: rgba(255,255,255,0.55); font-size: 13px;
+    }
+    .btn-secondary:hover { color: #fff; }
+
+    /* CONCLUSION */
+    .conclusion { background: var(--bg-highlight); border: 1px solid var(--border); border-radius: 12px; padding: 32px; margin: 40px 0; }
+
+    /* RELATED */
+    .related { margin: 48px 0 0; padding-top: 32px; border-top: 1px solid var(--border); }
+    .related-title { font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); margin-bottom: 16px; }
+    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+    .related-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; padding: 16px; text-decoration: none; display: block; transition: border-color 0.2s; }
+    .related-card:hover { border-color: #E8762B; text-decoration: none; }
+    .related-card-label { font-size: 11px; color: var(--text-muted); margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.06em; }
+    .related-card-title { font-size: 13px; font-weight: 600; color: var(--text); line-height: 1.4; }
+    @media (max-width: 640px) { .related-grid { grid-template-columns: 1fr; } }
+
+    /* FOOTER */
+    footer {
+      background: #1E1E1E;
+      text-align: center; padding: 24px;
+      font-size: 13px; margin-top: 80px;
+    }
+    footer a { color: rgba(255,255,255,0.4); }
+    footer a:hover { color: #E8762B; text-decoration: none; }
+    footer span, footer { color: rgba(255,255,255,0.35); }
+
+    @media (max-width: 600px) {
+      .nav-inner { padding: 0; }
+      .hero { padding: 40px 0 32px; }
+      h1 { font-size: 22px; }
+      h2 { margin: 36px 0 12px; font-size: 16px; }
+      .cta-block { padding: 28px 20px; }
+      .step-card { flex-direction: column; gap: 12px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">Андрей&nbsp;<span>Спирин</span></a>
+        <div class="nav-links">
+      <a href="/about/">Обо мне</a>
+      <a href="/stati/">Статьи</a>
+    </div>
+    <a href="tg://resolve?domain=spirin_diagnost_bot&start=geo" class="nav-cta">Проверить сайт</a>
+    <button class="nav-burger" id="navBurger" aria-label="Меню"><span></span><span></span><span></span></button>
+  </div>
+  <div class="nav-mobile" id="navMobile">
+    <a href="/about/">Обо мне</a>
+    <a href="/stati/">Статьи</a>
+    <a href="tg://resolve?domain=spirin_diagnost_bot&start=geo" style="color:#E8762B; font-weight:600;">Проверить сайт</a>
+  </div>
+</nav>
+<script>
+(function(){
+  var b=document.getElementById('navBurger'),m=document.getElementById('navMobile');
+  if(!b||!m) return;
+  b.addEventListener('click',function(){b.classList.toggle('open');m.classList.toggle('open');});
+  m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){b.classList.remove('open');m.classList.remove('open');});});
+})();
+</script>
+
+<div class="container">
+
+  <div class="hero">
+    <div class="hero-breadcrumb">
+      <a href="/">Главная</a> &nbsp;/&nbsp; GEO-оптимизация
+    </div>
+    <h1>GEO-оптимизация сайта: как попасть в ответы ChatGPT и Алисы</h1>
+    <p class="hero-intro">SEO помогает попасть на первую страницу Google и Яндекса. GEO — Generative Engine Optimization — это другое: попасть в ответ ChatGPT, Алисы или Perplexity, когда ваш клиент спрашивает о вашем продукте или услуге.</p>
+    <p class="hero-intro">Это не теория из будущего. Это уже меняет, кто получает клиентов, а кто нет.</p>
+  </div>
+
+  <article>
+
+    <h2>В чём разница между SEO и GEO</h2>
+    <p>SEO борется за клик на сайт. GEO борется за то, чтобы нейросеть процитировала именно вас, когда отвечает клиенту напрямую — без перехода на сайт вообще.</p>
+    <p>Больше половины запросов в Google сегодня заканчиваются без перехода. Человек получает ответ от AI-ассистента — и не идёт дальше. Можно стоять на первом месте в поиске и при этом быть невидимым для части аудитории.</p>
+
+    <div class="stat-block">
+      По данным Sparktoro, в 2024 году каждый четвёртый поисковый запрос в Google уже заканчивался без клика. В 2025-м — каждый второй. AI-поиск меняет правила быстрее, чем успевает большинство сайтов.
+    </div>
+
+    <p>AI-поиск пока даёт меньше прямого трафика, чем обычный — но качество этого трафика выше. Если ChatGPT или Алиса назвали компанию по имени в ответе клиенту, доверие возникает до перехода на сайт. Человек приходит уже тёплым.</p>
+
+    <div class="expert-tip">
+      <div class="expert-tip-label">💡 Практический момент</div>
+      <p>Попробуйте прямо сейчас: спросите ChatGPT или Алису про вашу компанию или вашу услугу в вашем городе. Если нейросеть не знает о вас ничего — это и есть точка отсчёта для GEO.</p>
+    </div>
+
+    <h2>Что нейросети учитывают при выборе источника</h2>
+    <p>Логика отбора у AI-поисковиков конкретная, не случайная. Вот что влияет:</p>
+
+    <ul>
+      <li><strong>Текст разбит на блоки «вопрос → ответ»</strong> — оттуда проще взять готовый ответ целиком</li>
+      <li><strong>Конкретные цифры и факты</strong> — «экономит время» плохо, «сокращает ответ клиенту с 6 часов до 15 секунд» хорошо</li>
+      <li><strong>Личный опыт и разбор ошибок</strong> ценятся выше самопрезентации — AI занижает тексты, которые читаются как реклама</li>
+      <li><strong>Структурированные данные</strong>: разметка FAQ, файл llms.txt, понятная иерархия H1/H2/H3 — то, что бот читает первым</li>
+      <li><strong>Контент доступен без JavaScript</strong> — если текст подгружается браузером, бот видит пустую страницу</li>
+    </ul>
+
+    <h2>Реальный пример</h2>
+    <p>У одного из клиентов — производителя строительных материалов — сайт был сделан хорошо: большой раздел «Академия» с терминами, 474 статьи в блоге. Но при аудите выяснилось: контент подгружался в браузере через JavaScript. Для AI-краулеров страница выглядела почти пустой.</p>
+    <p>Более трёх сотен терминов и сотни статей физически не доходили до нейросетей — хотя для людей всё выглядело нормально.</p>
+
+    <div class="card card-accent">
+      <p>Проблема не в качестве контента, а в том, как он технически отдавался при запросе. Исправить это можно без переписывания ни одной статьи.</p>
+    </div>
+
+    <h2>Чек-лист GEO-проверки сайта: 5 шагов</h2>
+    <p>Вот с чего начинают, прежде чем что-то переделывать:</p>
+
+    <div class="step-card">
+      <div class="step-num">1</div>
+      <div class="step-body">
+        <strong>Спросите ChatGPT или Алису про свою компанию</strong>
+        Самый быстрый тест. Если нейросеть не знает о вас ничего — это точка отсчёта. Если знает неправильно — ещё важнее разобраться.
+      </div>
+    </div>
+
+    <div class="step-card">
+      <div class="step-num">2</div>
+      <div class="step-body">
+        <strong>Проверьте, виден ли текст сайта без JavaScript</strong>
+        Откройте инструменты разработчика → отключите JS → обновите страницу. Весь основной текст должен остаться. Если страница стала пустой — боты видят то же самое.
+      </div>
+    </div>
+
+    <div class="step-card">
+      <div class="step-num">3</div>
+      <div class="step-body">
+        <strong>Проверьте robots.txt — разрешены ли AI-боты</strong>
+        Откройте yourdomain.ru/robots.txt. Должны быть явные Allow для GPTBot, ClaudeBot, PerplexityBot — или общий Allow: / для всех пользователей.
+      </div>
+    </div>
+
+    <div class="step-card">
+      <div class="step-num">4</div>
+      <div class="step-body">
+        <strong>Проверьте наличие llms.txt</strong>
+        Файл yourdomain.ru/llms.txt — краткая опись содержания сайта специально для нейросетей. Если его нет, у AI нет карты вашего сайта.
+      </div>
+    </div>
+
+    <div class="step-card">
+      <div class="step-num">5</div>
+      <div class="step-body">
+        <strong>Проверьте структурированную разметку FAQ</strong>
+        Страницы с разметкой FAQPage/Question/Answer напрямую сигнализируют AI: «здесь готовые ответы». Это один из самых прямых сигналов для цитирования.
+      </div>
+    </div>
+
+    <h2>Часто задаваемые вопросы</h2>
+
+    <div class="faq-item">
+      <div class="faq-q">Что такое GEO-оптимизация?</div>
+      <div class="faq-a">GEO — Generative Engine Optimization. Это оптимизация сайта под AI-поисковики: ChatGPT, Яндекс Алиса, Perplexity. Цель — чтобы нейросеть цитировала ваш сайт при ответах клиентам, а не просто показывала его в поиске.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Чем GEO отличается от SEO?</div>
+      <div class="faq-a">SEO борется за клик на сайт. GEO борется за попадание в ответ нейросети. Больше половины поисковых запросов сегодня заканчиваются без перехода на сайт — человек получает ответ от AI. Для этой половины аудитории SEO уже не работает.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">GEO-оптимизация заменит SEO?</div>
+      <div class="faq-a">Нет, дополнит. Обычный поиск никуда не исчезает. Но рядом появился второй канал — игнорировать его с каждым месяцем дороже.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Нужно ли срочно что-то переделывать?</div>
+      <div class="faq-a">Сначала проверить, видят ли нейросети ваш контент вообще. Часто весь текст спрятан в браузерном рендеринге — боты видят пустую страницу. Без этой проверки любая переделка вслепую.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Это дорого?</div>
+      <div class="faq-a">Базовая техническая основа делается быстро и недорого — вопрос дней, не месяцев. Объём работы зависит от размера сайта: пять страниц или пятьсот — разная трудоёмкость, но не разная сложность.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Это работает только для крупного бизнеса?</div>
+      <div class="faq-a">Наоборот. У небольшой компании меньше контента — привести его в порядок быстрее и дешевле, чем у крупного игрока с тысячами страниц.</div>
+    </div>
+
+    <div class="cta-block" id="contact">
+      <h2>Пришлите домен — Андрей лично проверит сайт</h2>
+      <p>Покажу, что видят и чего не видят нейросети на вашем сайте — конкретно, по этому чек-листу.</p>
+      <a href="tg://resolve?domain=spirin_diagnost_bot&start=geo" class="btn" target="_blank" rel="noopener">Получить личную проверку в Telegram →</a>
+    </div>
+
+    <div class="related">
+      <div class="related-title">Читать также</div>
+      <div class="related-grid">
+        <a href="/ii-sotrudnik-dlya-biznesa/" class="related-card">
+          <div class="related-card-label">Статья</div>
+          <div class="related-card-title">ИИ-сотрудник для бизнеса: как автоматизировать заявки и рутину</div>
+        </a>
+        <a href="/ii-dlya-prodazh/" class="related-card">
+          <div class="related-card-label">Статья</div>
+          <div class="related-card-title">ИИ для продаж: как автоматизировать продажи без найма</div>
+        </a>
+        <a href="/about/" class="related-card">
+          <div class="related-card-label">О компании</div>
+          <div class="related-card-title">Андрей Спирин — архитектор нейросотрудников и GEO-оптимизации</div>
+        </a>
+      </div>
+    </div>
+
+  </article>
+</div>
+
+<footer>
+  <a href="/">← Вернуться на главную</a>
+  &nbsp;&nbsp;·&nbsp;&nbsp;
+  <a href="https://aispirin.ru">aispirin.ru</a>
+  &nbsp;&nbsp;·&nbsp;&nbsp;
+  Андрей Спирин — архитектор нейросотрудников
+  &nbsp;&nbsp;·&nbsp;&nbsp;
+  <a href="/legal/">Юридические документы</a>
+</footer>
+
+</body>
+</html>
