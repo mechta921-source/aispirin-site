@@ -422,7 +422,7 @@
     .icard-desc { font-size: 14px; color: var(--muted); line-height: 1.7; }
 
     /* ── PRICING ── */
-    .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 50px; }
+    .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; margin-top: 50px; }
 
     .pcard {
       padding: 44px 36px;
@@ -731,6 +731,18 @@
       </ul>
       <a href="https://t.me/spirin_diagnost_bot" class="pbtn pbtn-outline">Получить инструкцию</a>
     </div>
+    <div class="pcard fi">
+      <div class="pname">Базовая установка</div>
+      <div class="pprice">50 000 <span>₽</span></div>
+      <div class="pdesc">Ставлю и настраиваю ALMA сам, дальше — она справляется без меня.</div>
+      <ul class="plist">
+        <li><strong>Установка на сервер</strong> — вся техника на нас</li>
+        <li><strong>1 месяц донастройки</strong> — подстраиваем личность и память под твою реальную работу</li>
+        <li>Дальше — сама, можно с помощью самой ALMA</li>
+        <li>Сервер и подписка Claude — на тебе</li>
+      </ul>
+      <a href="https://t.me/spirin_diagnost_bot" class="pbtn pbtn-outline">Хочу ALMA</a>
+    </div>
     <div class="pcard hot fi">
       <div class="pbadge">РЕКОМЕНДУЕМ</div>
       <div class="pname">Установка</div>
@@ -741,12 +753,25 @@
         <li><strong>Установка на сервер</strong> — вся техника на нас</li>
         <li><strong>Личная настройка</strong> — ALMA знает именно тебя</li>
         <li><strong>Обучение</strong> — как работать с ALMA максимально</li>
-        <li>Ведение после запуска — 5–10к/мес опционально</li>
+        <li><strong>3 месяца сопровождения включены</strong> — не разово, а по ходу работы</li>
       </ul>
       <a href="https://t.me/spirin_diagnost_bot" class="pbtn pbtn-fill">Хочу ALMA</a>
     </div>
     <div class="pcard fi">
-      <div class="pname">Сопровождение</div>
+      <div class="pbadge">ВЫГОДНЕЕ</div>
+      <div class="pname">Ведение</div>
+      <div class="pprice">10 000 <span>₽ / мес</span></div>
+      <div class="pdesc">Постоянная поддержка ALMA, когда закончились 3 бесплатных месяца из тарифа «Установка».</div>
+      <ul class="plist">
+        <li><strong>3 консультации в месяц включены</strong></li>
+        <li><strong>Доработка</strong> — донастройка личности и памяти ALMA под реальные задачи</li>
+        <li><strong>Приоритетная связь со мной</strong> — напрямую, не через бота</li>
+        <li>Без привязки на год — отключаешь в любой месяц</li>
+      </ul>
+      <a href="https://t.me/spirin_diagnost_bot" class="pbtn pbtn-outline">Подключить ведение</a>
+    </div>
+    <div class="pcard fi">
+      <div class="pname">Консультации по сопровождению</div>
       <div class="pprice">5 000 <span>₽ / час</span></div>
       <div class="pdesc">Личные сессии с Андреем Спириным. Докручиваем ALMA под задачи, учимся работать с Claude Code.</div>
       <ul class="plist">
