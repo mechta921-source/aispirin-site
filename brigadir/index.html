@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Бригадир Про — приложение для прорабов: смета, фото, договор и акты | Андрей Спирин</title>
+  <meta name="description" content="Смета, фото объекта, финансы, договор и все акты — в одном приложении на телефоне. Никаких трёх Excel-файлов и бумажного блокнота. Первые 14 дней бесплатно." />
+  <meta name="keywords" content="приложение для прораба, программа для сметы ремонта, акт скрытых работ онлайн, акт выполненных работ автоматически, договор подряда шаблон, бригадир про, учёт объектов ремонта" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://aispirin.ru/brigadir/" />
+  <meta property="og:title" content="Бригадир Про — всё, что нужно прорабу, у тебя в телефоне" />
+  <meta property="og:description" content="Смета, фото, финансы, договор и все акты объекта — в одном приложении. Первые 14 дней бесплатно." />
+  <meta property="og:image" content="https://aispirin.ru/brigadir/hero-prorab.jpg" />
+  <meta property="og:locale" content="ru_RU" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Бригадир Про — всё, что нужно прорабу, у тебя в телефоне" />
+  <meta name="twitter:description" content="Смета, фото, финансы, договор и все акты объекта — в одном приложении. Первые 14 дней бесплатно." />
+  <link rel="canonical" href="https://aispirin.ru/brigadir/" />
+  <link rel="icon" href="/favicon.ico" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Oswald:wght@700&display=swap" rel="stylesheet" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type": "Question", "name": "Это отдельная программа или часть сайта?",
+       "acceptedAnswer": {"@type": "Answer", "text": "Отдельное веб-приложение — brigadir-pro.ru. Работает в браузере на телефоне и компьютере, ничего не нужно устанавливать."}},
+      {"@type": "Question", "name": "Нужно ли уметь пользоваться Excel или бухгалтерскими программами?",
+       "acceptedAnswer": {"@type": "Answer", "text": "Нет. Смета, договор и акты собираются сами по введённым позициям — печатать формулы или разбираться в бухгалтерии не нужно."}},
+      {"@type": "Question", "name": "Что с документами — они юридически годятся?",
+       "acceptedAnswer": {"@type": "Answer", "text": "Договор собран на основе главы 37 ГК РФ, акты — по образцам реальных актов со строительных объектов. Это рабочий шаблон для малых бригад и частных мастеров, не индивидуальная юридическая консультация."}},
+      {"@type": "Question", "name": "Сколько это стоит?",
+       "acceptedAnswer": {"@type": "Answer", "text": "От 590 ₽ в месяц, есть тарифы на полгода и год. Первые 14 дней — бесплатно, без привязки карты."}}
+    ]
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --paper: #F5E6D0;
+      --paper-light: #FBF3E6;
+      --orange: #E8762B;
+      --orange-dark: #C9601C;
+      --yellow: #FFD600;
+      --yellow-dark: #E0BC00;
+      --ink: #1E1E1E;
+      --muted: #6B5A45;
+      --card: #FFFFFF;
+      --border: #E0D0BC;
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+      background: var(--paper-light);
+      color: var(--ink);
+      line-height: 1.55;
+    }
+    img, svg { display: block; max-width: 100%; }
+    a { color: inherit; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+
+    .btn {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: var(--yellow); color: var(--ink); font-weight: 800;
+      padding: 16px 32px; border-radius: 999px; text-decoration: none;
+      font-size: 17px; box-shadow: 0 10px 30px rgba(255,214,0,.35);
+      transition: transform .15s ease, box-shadow .15s ease;
+      border: none; cursor: pointer;
+    }
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 14px 36px rgba(255,214,0,.5); }
+    .btn-outline {
+      background: transparent; color: var(--ink); border: 2px solid var(--ink);
+      box-shadow: none;
+    }
+    .badge {
+      display: inline-block; background: var(--yellow); color: var(--ink);
+      font-weight: 800; font-size: clamp(10.5px, 2.9vw, 15px); letter-spacing: .02em; text-transform: uppercase;
+      padding: 8px 16px; border-radius: 999px; margin-bottom: 24px;
+      box-shadow: 0 8px 22px rgba(255,214,0,.4);
+    }
+
+    /* caution stripe — construction accent */
+    .stripe {
+      height: 10px;
+      background: repeating-linear-gradient(-45deg, var(--yellow), var(--yellow) 18px, var(--ink) 18px, var(--ink) 36px);
+    }
+
+    /* TOP BAR */
+    .topbar { padding: 16px 0; background: var(--card); border-bottom: 1px solid var(--border); }
+    .topbar .wrap { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .topbar a.logo {
+      display: flex; align-items: center; gap: 10px;
+      font-family: 'Oswald', sans-serif; font-size: 15px; font-weight: 700;
+      text-transform: uppercase; letter-spacing: .08em; color: var(--ink); text-decoration: none;
+      flex-shrink: 0;
+    }
+    .topbar a.logo img { height: 30px; width: auto; }
+    .topbar a.logo span { color: var(--orange); }
+
+    .nav-links { display: flex; align-items: center; gap: 26px; list-style: none; margin-left: auto; }
+    .nav-links a { color: var(--ink); text-decoration: none; font-weight: 600; font-size: 14.5px; }
+    .nav-links a:hover { color: var(--orange-dark); }
+    .nav-cta {
+      background: var(--yellow); color: var(--ink); font-weight: 800; font-size: 14px;
+      padding: 10px 20px; border-radius: 999px; text-decoration: none; white-space: nowrap;
+    }
+    .nav-burger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 6px; }
+    .nav-burger span { width: 22px; height: 2px; background: var(--ink); display: block; transition: .2s; }
+    .nav-burger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-burger.open span:nth-child(2) { opacity: 0; }
+    .nav-burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    .nav-mobile {
+      display: none; flex-direction: column; gap: 4px; background: var(--card);
+      border-bottom: 1px solid var(--border); max-height: 0; overflow: hidden; transition: max-height .2s ease;
+    }
+    .nav-mobile a {
+      padding: 14px 24px; color: var(--ink); text-decoration: none; font-weight: 600; font-size: 15px;
+      border-top: 1px solid var(--border);
+    }
+    .nav-mobile.open { max-height: 300px; }
+    @media (max-width: 780px) {
+      .nav-links { display: none; }
+      .nav-burger { display: flex; }
+      .nav-mobile { display: flex; }
+    }
+
+    /* HERO */
+    header.hero { padding: 44px 0 40px; }
+    .hero-center {
+      max-width: 560px; margin: 0 auto; text-align: center;
+      display: flex; flex-direction: column; align-items: center;
+    }
+    header.hero h1 {
+      font-size: clamp(28px, 6vw, 44px); font-weight: 800; letter-spacing: -.02em;
+      margin: 0 0 16px; color: var(--ink);
+    }
+    header.hero h1 span { color: var(--orange-dark); }
+    header.hero p.sub {
+      font-size: 17px; color: var(--muted); margin: 0;
+    }
+    .hero-photo-frame { position: relative; margin: 6px 0 46px; }
+    .hero-photo-frame img {
+      max-width: 320px; width: 100%; margin: 0 auto;
+      filter: drop-shadow(0 20px 36px rgba(30,30,30,.2));
+    }
+    .hero-photo-frame .btn {
+      position: absolute; left: 50%; bottom: -22px; transform: translateX(-50%);
+      white-space: nowrap;
+    }
+    @media (min-width: 640px) {
+      .hero-photo-frame img { max-width: 400px; }
+    }
+    @media (min-width: 900px) {
+      .hero-center { max-width: 1080px; align-items: center; }
+      .hero-body {
+        display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center;
+        text-align: left; width: 100%;
+      }
+      .hero-photo-frame { margin: 0 0 30px; }
+      .hero-photo-frame img { max-width: 460px; }
+      header.hero p.sub { max-width: 440px; }
+    }
+
+    .section-title { text-align: center; font-size: clamp(26px,4vw,36px); font-weight: 800; margin-bottom: 12px; }
+    .section-sub { text-align: center; color: var(--muted); font-size: 17px; max-width: 620px; margin: 0 auto 48px; }
+
+    /* FEATURES */
+    section.features { padding: 90px 0; background: var(--paper); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px,1fr)); gap: 22px; }
+    @media (min-width: 900px) {
+      .feature-grid { grid-template-columns: repeat(4, 1fr); }
+    }
+    .feature {
+      background: var(--card); border: 1px solid var(--border); border-radius: 20px;
+      padding: 30px 26px; border-top: 4px solid var(--yellow);
+    }
+    .feature .icon { font-size: 30px; margin-bottom: 14px; }
+    .feature h3 { font-size: 18px; font-weight: 800; margin-bottom: 10px; }
+    .feature p { font-size: 14.5px; color: var(--muted); line-height: 1.6; }
+
+    .templates-note {
+      max-width: 760px; margin: 40px auto 0; text-align: center;
+      background: var(--ink); color: #fff; border-radius: 20px; padding: 26px 32px;
+      font-size: 15px; line-height: 1.6;
+    }
+    .templates-note strong { color: var(--yellow); }
+
+    /* PRICING */
+    section.pricing { padding: 90px 0; }
+    .price-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px,1fr)); gap: 24px; max-width: 900px; margin: 40px auto 0; }
+    .price-card {
+      background: var(--card); border: 1px solid var(--border); border-radius: 24px; padding: 36px 30px; text-align: center;
+    }
+    .price-card.featured {
+      background: var(--ink); color: #fff; border: none; position: relative;
+      box-shadow: 0 20px 50px rgba(30,30,30,.25);
+    }
+    .price-card .tag {
+      display: inline-block; margin-bottom: 16px;
+      background: var(--yellow); color: var(--ink); font-size: 12px; font-weight: 800; letter-spacing: .04em;
+      padding: 6px 16px; border-radius: 999px; text-transform: uppercase;
+    }
+    .price-card h3 { font-size: 18px; font-weight: 700; margin-bottom: 8px; }
+    .price-card .amount { font-size: 40px; font-weight: 800; margin: 12px 0 6px; white-space: nowrap; }
+    .price-card.featured .amount { color: var(--yellow); }
+    .price-card .desc { font-size: 14px; color: var(--muted); margin-bottom: 22px; }
+    .price-card.featured .desc { color: rgba(255,255,255,.7); }
+    .price-card .btn { width: 100%; justify-content: center; }
+    .trial-note { text-align: center; color: var(--muted); font-size: 15px; margin-top: -18px; margin-bottom: 10px; }
+    .trial-note strong { color: var(--orange-dark); }
+
+    /* FAQ */
+    section.faq { padding: 80px 0 100px; background: var(--paper); border-top: 1px solid var(--border); }
+    .faq-list { max-width: 720px; margin: 0 auto; display: flex; flex-direction: column; gap: 14px; }
+    .faq-item { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 22px 26px; }
+    .faq-item summary { font-weight: 700; cursor: pointer; list-style: none; }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after { content: '+'; float: right; color: var(--orange); font-size: 22px; font-weight: 400; }
+    .faq-item[open] summary::after { content: '−'; }
+    .faq-item p { margin-top: 12px; color: var(--muted); font-size: 15px; }
+
+    /* FOOTER CTA */
+    section.final-cta { padding: 90px 0; text-align: center; }
+    section.final-cta h2 { font-size: clamp(26px,4vw,38px); font-weight: 800; margin-bottom: 16px; }
+    section.final-cta p { color: var(--muted); font-size: 17px; margin-bottom: 32px; }
+
+    footer { padding: 30px 0; text-align: center; color: var(--muted); font-size: 13px; border-top: 1px solid var(--border); }
+    .footer-back { margin-bottom: 14px; }
+    .footer-back a { color: var(--orange-dark); text-decoration: none; font-weight: 600; }
+    .footer-back a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+  <div class="stripe"></div>
+
+  <div class="topbar">
+    <div class="wrap">
+      <a href="https://aispirin.ru/" class="logo"><img src="/brigadir/icon-mark.png" alt="Андрей Спирин" /><span>Андрей</span> Спирин</a>
+      <div class="nav-links">
+        <a href="https://aispirin.ru/">Главная</a>
+        <a href="https://aispirin.ru/proforientaciya/">Профориентация</a>
+        <a href="https://aispirin.ru/pto/">ПТО</a>
+        <a href="tg://resolve?domain=spirin_diagnost_bot" class="nav-cta" target="_blank" rel="noopener">Получить разбор</a>
+      </div>
+      <button class="nav-burger" id="navBurger" aria-label="Меню"><span></span><span></span><span></span></button>
+    </div>
+    <div class="nav-mobile" id="navMobile">
+      <a href="https://aispirin.ru/">Главная</a>
+      <a href="https://aispirin.ru/proforientaciya/">Профориентация</a>
+      <a href="https://aispirin.ru/pto/">ПТО</a>
+      <a href="tg://resolve?domain=spirin_diagnost_bot" target="_blank" rel="noopener">Получить разбор</a>
+    </div>
+  </div>
+  <script>
+    (function(){
+      var b = document.getElementById('navBurger'), m = document.getElementById('navMobile');
+      b.addEventListener('click', function(){
+        b.classList.toggle('open');
+        m.classList.toggle('open');
+      });
+      m.querySelectorAll('a').forEach(function(a){
+        a.addEventListener('click', function(){ b.classList.remove('open'); m.classList.remove('open'); });
+      });
+    })();
+  </script>
+
+  <header class="hero">
+    <div class="wrap hero-center">
+      <span class="badge">Бригадир Про — для прорабов и бригад</span>
+      <div class="hero-body">
+        <div class="hero-photo-frame">
+          <img src="/brigadir/hero-prorab.png" alt="Прораб пользуется приложением Бригадир Про">
+          <a href="https://brigadir-pro.ru" target="_blank" rel="noopener" class="btn">Перейти в приложение →</a>
+        </div>
+        <div class="hero-text">
+          <h1><span>Бригадир</span> — всё, что нужно прорабу, у тебя в телефоне.</h1>
+          <p class="sub">Раньше — Excel-таблицы и бумажный блокнот на каждый объект. Теперь — учёт объекта ремонта в одном приложении для прораба.</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="features">
+    <div class="wrap">
+      <h2 class="section-title">Что вы получите внутри приложения</h2>
+      <p class="section-sub">Смета, фото, деньги, договор и акты — восемь инструментов, которые обычно живут в разных местах. Здесь они работают вместе, под одной кнопкой на телефоне.</p>
+
+      <div class="feature-grid">
+        <div class="feature">
+          <div class="icon">📋</div>
+          <h3>Смета</h3>
+          <p>Вбиваешь позиции — количество, цену, единицу измерения — приложение считает итог само. Готовую смету скачиваешь как PDF и отправляешь заказчику или печатаешь на объект. Никаких формул в Excel, которые слетают при правке.</p>
+        </div>
+        <div class="feature">
+          <div class="icon">📸</div>
+          <h3>Фото объекта</h3>
+          <p>На каждый объект — своя галерея. Снимаешь этап работ прямо с телефона, фото сразу попадают в приложение. Через месяц, когда заказчик спросит «а как было под стяжкой» — открываешь галерею, а не роешься в переписке.</p>
+        </div>
+        <div class="feature">
+          <div class="icon">💰</div>
+          <h3>Финансы</h3>
+          <p>Приход и расход по объекту — в одном месте. Сколько получил, сколько потратил на материалы и бригаду, что осталось. Без блокнота, без «потом посчитаю».</p>
+        </div>
+        <div class="feature">
+          <div class="icon">📄</div>
+          <h3>Договор</h3>
+          <p>Заполняешь данные заказчика и объекта один раз — договор собирается сам, по шаблону на основе Гражданского кодекса. Дальше просто скачиваешь PDF и подписываете.</p>
+        </div>
+        <div class="feature">
+          <div class="icon">✅</div>
+          <h3>Акт выполненных работ</h3>
+          <p>Не переписываешь смету заново — жмёшь одну кнопку, и приложение клонирует все позиции сметы в акт. Правишь, если что-то изменилось по факту, и сразу в PDF.</p>
+        </div>
+        <div class="feature">
+          <div class="icon">🔍</div>
+          <h3>Акт скрытых работ</h3>
+          <p>Закрыл гидроизоляцию или проводку под стяжкой — оформи акт скрытых работ прямо на месте, с фото из той же галереи объекта. Если потом возникнут вопросы, есть чем подтвердить, что и как было сделано.</p>
+        </div>
+        <div class="feature">
+          <div class="icon">🤝</div>
+          <h3>Акт сдачи-приёмки</h3>
+          <p>Работы закончены — закрываешь объект одним документом с гарантией на 12 месяцев. Приложение само подтягивает все акты выполненных работ по объекту, тебе останется только подписать.</p>
+        </div>
+        <div class="feature">
+          <div class="icon">📝</div>
+          <h3>Доп. соглашения</h3>
+          <p>Если по ходу работ условия меняются — не переписываешь весь договор, а оформляешь доп. соглашение. Внутри него свои сметы и акты, всё привязано к основному договору автоматически.</p>
+        </div>
+      </div>
+
+      <div class="templates-note">
+        Все шаблоны уже готовы — <strong>договор, смета, акт выполненных работ, акт скрытых работ, акт сдачи-приёмки.</strong> От тебя нужен только свой прайс-лист — остальное приложение берёт на себя.
+      </div>
+    </div>
+  </section>
+
+  <section class="pricing" id="tarify">
+    <div class="wrap">
+      <h2 class="section-title">Тарифы</h2>
+      <p class="trial-note"><strong>14 дней — бесплатно</strong>, без привязки карты</p>
+      <div class="price-cards">
+        <div class="price-card">
+          <h3>Месяц</h3>
+          <div class="amount">590 ₽</div>
+          <p class="desc">Попробовать на одном объекте</p>
+          <a href="https://brigadir-pro.ru" target="_blank" rel="noopener" class="btn btn-outline">Попробовать бесплатно</a>
+        </div>
+        <div class="price-card featured">
+          <span class="tag">Выгоднее</span>
+          <h3>Полгода</h3>
+          <div class="amount">2 900 ₽</div>
+          <p class="desc">Для бригады на несколько объектов</p>
+          <a href="https://brigadir-pro.ru" target="_blank" rel="noopener" class="btn">Попробовать бесплатно</a>
+        </div>
+        <div class="price-card">
+          <h3>Год</h3>
+          <div class="amount">5 000 ₽</div>
+          <p class="desc">Самый выгодный тариф на все объекты года</p>
+          <a href="https://brigadir-pro.ru" target="_blank" rel="noopener" class="btn btn-outline">Попробовать бесплатно</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq">
+    <div class="wrap">
+      <h2 class="section-title">Вопросы и ответы</h2>
+      <div class="faq-list">
+        <details class="faq-item" open>
+          <summary>Это отдельная программа или часть сайта?</summary>
+          <p>Отдельное веб-приложение — brigadir-pro.ru. Работает в браузере на телефоне и компьютере, ничего не нужно устанавливать.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Нужно ли уметь пользоваться Excel или бухгалтерскими программами?</summary>
+          <p>Нет. Смета, договор и акты собираются сами по введённым позициям — печатать формулы или разбираться в бухгалтерии не нужно.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Что с документами — они юридически годятся?</summary>
+          <p>Договор собран на основе главы 37 ГК РФ, акты — по образцам реальных актов со строительных объектов. Это рабочий шаблон для малых бригад и частных мастеров, не индивидуальная юридическая консультация.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Сколько это стоит?</summary>
+          <p>От 590 ₽ в месяц, есть тарифы на полгода и год. Первые 14 дней — бесплатно, без привязки карты.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="final-cta">
+    <div class="wrap">
+      <h2>Хватит вести объект в трёх местах сразу</h2>
+      <p>Смета, фото, деньги и все документы — в одном приложении. Первые 14 дней бесплатно.</p>
+      <a href="https://brigadir-pro.ru" target="_blank" rel="noopener" class="btn">Перейти в приложение →</a>
+    </div>
+  </section>
+
+  <div class="stripe"></div>
+
+  <footer>
+    <div class="wrap">
+      <div class="footer-back">
+        Ещё продукты Андрея Спирина — <a href="https://aispirin.ru/">на главной странице aispirin.ru →</a>
+      </div>
+      Андрей Спирин · СК СВАРОГ · aispirin.ru
+      · <a href="https://aispirin.ru/privacy/">Политика конфиденциальности</a>
+    </div>
+  </footer>
+
+</body>
+</html>

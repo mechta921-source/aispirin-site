@@ -506,6 +506,9 @@
 
     .pbtn-fill:hover { box-shadow: 0 0 50px rgba(233,30,140,0.45); }
 
+    .pbtn:disabled { opacity: 0.4; cursor: not-allowed; box-shadow: none; }
+    .pbtn:disabled:hover { background: none; box-shadow: none; }
+
     /* ── FOR WHOM ── */
     .forwhom { background: var(--bg2); }
 
@@ -701,6 +704,22 @@
   </div>
 </section>
 
+<!-- ══════════ CAPABILITIES ══════════ -->
+<section class="inside">
+  <div class="fi" style="text-align:center;max-width:560px;margin:0 auto">
+    <span class="s-label">Возможности</span>
+    <h2 class="s-title">Не только<br><em>разговор</em></h2>
+  </div>
+  <div class="inside-grid">
+    <div class="icard fi"><div class="icard-num">01</div><div class="icard-title">Целая команда</div><div class="icard-desc">Заменяет менеджера по продажам, оператора поддержки, маркетолога и копирайтера. Одна ALMA — не одна функция.</div></div>
+    <div class="icard fi"><div class="icard-num">02</div><div class="icard-title">Строит сайты</div><div class="icard-desc">Сама создаёт сайты-визитки и лендинги под ключ: дизайн, вёрстка, домен.</div></div>
+    <div class="icard fi"><div class="icard-num">03</div><div class="icard-title">Пишет приложения</div><div class="icard-desc">Собирает Telegram-ботов и небольшие сервисы под задачу бизнеса — без найма разработчика.</div></div>
+    <div class="icard fi"><div class="icard-num">04</div><div class="icard-title">Продвигает в поиске</div><div class="icard-desc">SEO встроено в то, что создаёт: метатеги, структура, скорость загрузки.</div></div>
+    <div class="icard fi"><div class="icard-num">05</div><div class="icard-title">Настраивает GEO</div><div class="icard-desc">Геотаргетинг, локальное SEO, карты — чтобы находили именно в твоём городе.</div></div>
+    <div class="icard fi"><div class="icard-num">06</div><div class="icard-title">Дружит с CRM</div><div class="icard-desc">Подключает amoCRM и другие сервисы бизнеса. Данные не теряются между системами.</div></div>
+  </div>
+</section>
+
 <!-- ══════════ INSIDE ══════════ -->
 <section class="inside">
   <div class="fi" style="text-align:center;max-width:560px;margin:0 auto">
@@ -718,6 +737,10 @@
 <section>
   <span class="s-label fi">Тарифы</span>
   <h2 class="s-title fi">Выбери как<br><em>запустить ALMA</em></h2>
+  <label class="fi" style="display:flex;align-items:flex-start;gap:10px;max-width:480px;margin:24px auto 0;text-align:left;font-size:14px;color:var(--muted)">
+    <input type="checkbox" id="alma-consent" style="margin-top:3px;width:18px;height:18px;accent-color:var(--electric);flex-shrink:0">
+    <span>Согласен(на) на обработку персональных данных согласно <a href="https://aispirin.ru/privacy/" target="_blank" rel="noopener noreferrer" style="color:var(--electric)">политике конфиденциальности</a></span>
+  </label>
   <div class="pricing-grid">
     <div class="pcard fi">
       <div class="pname">Инструкция</div>
@@ -729,7 +752,7 @@
         <li><strong>Wizard-настройка</strong> — ALMA сама опросит и настроит личность</li>
         <li>Сервер и подписка Claude — на тебе</li>
       </ul>
-      <a href="https://t.me/spirin_diagnost_bot" class="pbtn pbtn-outline">Получить инструкцию</a>
+      <button onclick="startPayment('instruction', this)" class="pbtn pbtn-outline" disabled>Оплатить</button>
     </div>
     <div class="pcard fi">
       <div class="pname">Базовая установка</div>
@@ -741,11 +764,11 @@
         <li>Дальше — сама, можно с помощью самой ALMA</li>
         <li>Сервер и подписка Claude — на тебе</li>
       </ul>
-      <a href="https://t.me/spirin_diagnost_bot" class="pbtn pbtn-outline">Хочу ALMA</a>
+      <button onclick="startPayment('basic', this)" class="pbtn pbtn-outline" disabled>Оплатить</button>
     </div>
     <div class="pcard hot fi">
       <div class="pbadge">РЕКОМЕНДУЕМ</div>
-      <div class="pname">Установка</div>
+      <div class="pname">Установка с сопровождением</div>
       <div class="pprice hot-price">75 000 <span>₽</span></div>
       <div class="pdesc">Андрей Спирин лично устанавливает и настраивает ALMA под тебя. Ты получаешь готового помощника.</div>
       <ul class="plist">
@@ -755,7 +778,7 @@
         <li><strong>Обучение</strong> — как работать с ALMA максимально</li>
         <li><strong>3 месяца сопровождения включены</strong> — не разово, а по ходу работы</li>
       </ul>
-      <a href="https://t.me/spirin_diagnost_bot" class="pbtn pbtn-fill">Хочу ALMA</a>
+      <button onclick="startPayment('full', this)" class="pbtn pbtn-fill" disabled>Оплатить</button>
     </div>
     <div class="pcard fi">
       <div class="pbadge">ВЫГОДНЕЕ</div>
@@ -768,11 +791,11 @@
         <li><strong>Приоритетная связь со мной</strong> — напрямую, не через бота</li>
         <li>Без привязки на год — отключаешь в любой месяц</li>
       </ul>
-      <a href="https://t.me/spirin_diagnost_bot" class="pbtn pbtn-outline">Подключить ведение</a>
+      <button onclick="startPayment('support', this)" class="pbtn pbtn-outline" disabled>Оплатить</button>
     </div>
     <div class="pcard fi">
       <div class="pname">Консультации по сопровождению</div>
-      <div class="pprice">5 000 <span>₽ / час</span></div>
+      <div class="pprice"><span id="consult-total" style="font-size:inherit">5 000</span> <span>₽</span></div>
       <div class="pdesc">Личные сессии с Андреем Спириным. Докручиваем ALMA под задачи, учимся работать с Claude Code.</div>
       <ul class="plist">
         <li><strong>1:1 сессия</strong> — разбираем твои задачи и настраиваем ALMA</li>
@@ -780,10 +803,76 @@
         <li><strong>Поддержка</strong> — вопросы после запуска</li>
         <li>Гибко — бери столько часов, сколько нужно</li>
       </ul>
-      <a href="https://t.me/spirin_diagnost_bot" class="pbtn pbtn-outline">Записаться на сессию</a>
+      <div class="hours-stepper" style="display:flex;align-items:center;gap:14px;margin-bottom:18px">
+        <button type="button" onclick="changeHours(-1)" style="width:32px;height:32px;border-radius:50%;border:1px solid var(--gb);background:transparent;color:inherit;cursor:pointer">−</button>
+        <span><strong id="consult-hours">1</strong> ч</span>
+        <button type="button" onclick="changeHours(1)" style="width:32px;height:32px;border-radius:50%;border:1px solid var(--gb);background:transparent;color:inherit;cursor:pointer">+</button>
+      </div>
+      <button onclick="startPaymentConsult(this)" class="pbtn pbtn-outline" disabled>Оплатить</button>
     </div>
   </div>
+  <p class="fi" style="text-align:center;margin-top:32px;color:var(--muted);font-size:14px">
+    Не уверены, какой тариф ваш?
+    <a href="https://t.me/spirin_diagnost_bot" style="color:var(--electric)">Напишите — подберём вместе</a>.
+  </p>
 </section>
+
+<script>
+  const ALMA_API = "https://alma-payment.vercel.app";
+  let consultHours = 1;
+
+  const consentBox = document.getElementById("alma-consent");
+  const payButtons = document.querySelectorAll(".pbtn");
+  function syncConsentState() {
+    payButtons.forEach((b) => { b.disabled = !consentBox.checked; });
+  }
+  consentBox.addEventListener("change", syncConsentState);
+  syncConsentState();
+
+  function changeHours(delta) {
+    consultHours = Math.max(1, consultHours + delta);
+    document.getElementById("consult-hours").textContent = consultHours;
+    document.getElementById("consult-total").textContent = (consultHours * 5000).toLocaleString("ru-RU");
+  }
+
+  async function createPayment(track, hours, btn) {
+    if (!consentBox.checked) {
+      alert("Пожалуйста, подтвердите согласие на обработку персональных данных.");
+      return;
+    }
+    const original = btn.textContent;
+    btn.disabled = true;
+    btn.textContent = "Переходим к оплате…";
+    try {
+      const res = await fetch(ALMA_API + "/api/payment/create", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ track, hours }),
+      });
+      const data = await res.json();
+      if (data.confirmationUrl) {
+        localStorage.setItem("alma_payment_id", data.paymentId);
+        window.location.href = data.confirmationUrl;
+      } else {
+        alert("Не получилось создать оплату, попробуйте ещё раз или напишите нам.");
+        btn.disabled = false;
+        btn.textContent = original;
+      }
+    } catch (e) {
+      alert("Ошибка соединения, попробуйте ещё раз.");
+      btn.disabled = false;
+      btn.textContent = original;
+    }
+  }
+
+  function startPayment(track, btn) {
+    createPayment(track, undefined, btn);
+  }
+
+  function startPaymentConsult(btn) {
+    createPayment("consult", consultHours, btn);
+  }
+</script>
 
 <!-- ══════════ FOR WHOM ══════════ -->
 <section class="forwhom">
